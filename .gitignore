@@ -1,0 +1,58 @@
+# As Yeoman assumes the usage of Bower and Grunt, ignore the below:
+bower_components
+node_modules
+
+# Ignore automatically generated cruft
+*.log
+.sass-cache
+.*/
+
+# Ignore config
+dev/yesimlocal.php
+tmp/
+dev/screenshots/
+htdocs/wp-content/themes/rock-gilleshoarau/dev/
+
+
+# Operating system files
+.Spotlight-V100
+.Trashes
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+# Vagrant
+.vagrant
+
+# Wordpress
+htdocs/wc-logs/
+htdocs/wp-admin/
+htdocs/wp-includes/
+htdocs/wp-*.php
+htdocs/xmlrpc.php
+
+htdocs/wp-content/cache/
+!htdocs/wp-content/cache/.htaccess
+htdocs/wp-content/ewww/
+htdocs/wp-content/languages/
+htdocs/wp-content/plugins/
+htdocs/wp-content/upgrade/
+htdocs/wp-content/uploads/
+htdocs/wp-content/wppa-depot/
+htdocs/wp-content/*.php
+
+htdocs/wp-content/themes/*.php
+
+myhost.json
+
+htdocs/index.php
+htdocs/license.txt
+htdocs/*.html
+htdocs/apiservice/
+htdocs/kersley/
+htdocs/le-chat/
+htdocs/rastared/
+htdocs/senzu/
+
+htdocs/.htaccess

@@ -1,0 +1,9 @@
+@import "variables.less";
+body#tinymce.wp-editor {
+  background: ;
+  color: ;
+  font-size: ;
+}
+body#tinymce.wp-editor a {
+  color: ;
+}

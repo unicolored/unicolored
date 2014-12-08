@@ -1,0 +1,146 @@
+
+
+    <form id="contactForm" class="contactform" role="form" name="contactForm" data-ng-controller="ContactCtrl">
+
+        <blockquote>
+          <h3>Devis et Rendez-vous</h3>
+        </blockquote>
+        <div class="lescoordonnees">
+            <div class="lemessage">
+              <label>Votre message</label>
+              <div class="form-group">
+                <textarea data-ng-model="user.body" class="form-control input-sm" required="required"
+                rows="10" placeholder="Merci de me recontacter."></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon input-sm" data-ng-show="contactForm.name.$invalid && !contactForm.name.$dirty">
+                  <span class="icon-user2"></span>
+                </div>
+                <div class="input-group-addon input-sm bg-warning" data-ng-show="contactForm.name.$error.minlength && contactForm.name.$dirty || contactForm.name.$invalid && contactForm.name.$dirty">
+                  <span class="icon-user2"></span>
+                </div>
+                <div class="input-group-addon input-sm bg-success" data-ng-show="!contactForm.name.$invalid">
+                  <span class="icon-checkmark"></span>
+                </div>
+                <input data-ng-model="user.name" name="name" required="required" data-ng-minlength="3"
+                type="text" class="form-control input-sm"
+                placeholder="Nom Prénom *" />
+              </div>
+            </div>
+            <div data-ng-show="contactForm.name.$error.required && contactForm.name.$dirty">
+              <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">
+                  <span aria-hidden="true">&times;</span>
+                  <span class="sr-only">Close</span>
+                </button>
+                <span class="close"></span>Merci d'entrer votre nom et/ou
+                celui de votre société.
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon input-sm" data-ng-show="contactForm.email.$invalid && !contactForm.email.$dirty">
+                  <span class="icon-mail"></span>
+                </div>
+                <div class="input-group-addon input-sm bg-warning" data-ng-show="contactForm.email.$invalid && contactForm.email.$dirty">
+                  <span class="icon-mail"></span>
+                </div>
+                <div class="input-group-addon input-sm bg-success" data-ng-show="!contactForm.email.$invalid">
+                  <span class="icon-checkmark"></span>
+                </div>
+                <input data-ng-model="user.email" name="email" required="required" type="email"
+                class="form-control input-sm" placeholder="Votre email *"
+                />
+              </div>
+            </div>
+
+            <!-- SECTION // UPLOAD -->
+            <div class="piecesjointes">
+              <label>
+                <span class="icon-attachment"></span> Pièces jointes
+
+                <small>
+                  &lt; 10Mo</small>
+                </label>
+                <div class="alert alert-info">
+                  <p>
+                    <?php br_Icon( 'info-sign') ?>
+                    <strong>Vous pouvez joindre jusqu'à 3 pièces jointes</strong> par
+                    message. Profitez-en pour m'envoyer votre
+                    <strong>logo</strong> ou un
+                    <strong>cahier des charges</strong>.</p>
+                  </div>
+                <div data-ng-show="uploader.isHTML5">
+                  <div data-nv-file-drop="" data-uploader="uploader">
+                    <div data-nv-file-over="" data-uploader="uploader" class="well my-drop-zone">
+                      Faites glisser vos fichiers ici ou cliquez ci-dessous
+                      <input type="file" data-nv-file-select="" data-uploader="uploader" multiple="multiple"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="alert alert-danger" data-ng-show="err.sizeFilter">
+                  <button class="close" data-dismiss="alert">
+                    x
+                  </button>
+                  <strong>Désolé !</strong> Taille de fichier
+                  trop importante.
+                </div>
+                <div data-ng-show="uploader.queue.length">
+                  <p>
+                    <small>File d'attente : {{ uploader.queue.length }}/3
+                  </small>
+                </p>
+                <table class="mytable table table-striped table-hover table-condensed">
+                  <tbody>
+                    <tr data-ng-repeat="item in uploader.queue">
+                      <td>
+                        <button type="button" class="btn btn-danger btn-xs" data-ng-click="item.remove()">
+                          <span class="icon-trash"></span>
+                        </button>
+                        <small>{{ item.file.name }}</small>
+                      </td>
+                      <td data-ng-show="uploader.isHTML5">{{ item.file.size/1024/1024|number:2
+                      }} MB</td>
+                      <td data-ng-show="uploader.isHTML5">
+                        <div class="progress filename" style="margin-bottom: 0;">
+                          <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                          data-ng-style="{ 'width': item.progress + '%' }"></div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div data-ng-show="uploader.isUploading">
+                  Envoi du message en cours...
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                    data-ng-style="{ 'width': uploader.progress + '%' }">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIN -->
+          <div class="alert alert-danger" data-ng-show="error">
+            <button class="close" data-dismiss="alert">
+              x
+            </button>
+            <strong>Désolé !</strong> Une erreur s'est produite.
+          </div>
+          <div class="alert alert-success" data-ng-show="success">
+            <button class="close" data-dismiss="alert">
+              x
+            </button>
+            <strong>Merci ! </strong> Votre demande a bien
+            été envoyée.
+          </div>
+        </div>
+        <!-- SUBMIT BUTTON -->
+        <button class="btn btn-success btn-block" data-ng-click="send()" data-ng-disabled="contactForm.$invalid || uploader.isUploading">
+          <span class="icon-rocket"></span> Envoyer
+        </button>
+
+    </form>

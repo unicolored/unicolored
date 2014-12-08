@@ -1,0 +1,60 @@
+/* Styles de section.content */
+
+  //padding-bottom:@navbar-height*2;
+
+  .fontlogo {
+    font-family:@font-family-base-iv;
+    color:#fff;
+    font-size:@font-size-large*3.6;
+    margin:@padding-large-vertical; margin-bottom:0.1em;
+    text-shadow:0 5px 5px @txtShadowcolor;
+    letter-spacing:-0.05em;
+    line-height:@line-height-large*0.6;    
+    padding:@padding-base-vertical @padding-base-horizontal;
+  }
+  
+  .fontcompetences {
+    font-family:@font-family-base-iv;
+    color:@ivColorBlue1;
+    font-size:@font-size-large*2;
+    margin:0;
+    text-shadow:0 5px 5px @txtShadowcolor;
+    letter-spacing:-0.05em;
+    
+    .text-center();
+    margin:@padding-base-vertical 0;
+    
+  }
+  
+  header.art-header {
+    h1 {
+      font-size:@font-size-large*3;
+      text-transform:uppercase;
+      line-height:1em;
+    }
+  }
+  
+  .h-int {
+    font-family:@alegreyaSans;
+    font-weight:400;
+    font-size:@font-size-large;
+  }
+  
+  aside.sidebar {
+    .make-sm-column(2);
+    .make-lg-column(1);
+    
+  
+    margin-top: @line-height-computed;
+    
+    @import "structures/aside.less";
+  }
+  
+  .make-sm-column(10); .make-sm-column-push(2);
+  .make-lg-column(8); .make-lg-column-push(1);
+  /* CSS Document */
+  padding-top: @padding-large-vertical;
+  padding-bottom: 10em;
+  border-left: 1px solid @gray-lighter;
+
+  @import "structures/content.less";

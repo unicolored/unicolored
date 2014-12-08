@@ -1,0 +1,38 @@
+/* Elements du design qui ne dépendent pas d'un emplacement dans le code Html */
+  
+  // SOCIALICONS : icones de reseaux sociaux
+  .socialicons {
+    .text-center();
+    a {
+      display:inline-block;
+      height:66px;
+      width:70px;
+      background-image:url(/wp-content/themes/rock-gilleshoarau/img/social_icons.png);
+      background-repeat:no-repeat;
+      margin:0 @padding-small-horizontal/2;
+      span {
+        .hidden();
+      }
+    }
+    a.twitter {
+      background-position:-70px 0;
+    }
+    a.google {
+      background-position:-140px 0;
+    }
+    a.blog {
+      background-position:center right;
+    }
+  }
+  
+
+  // WIDGETS  
+  aside.widget {
+    .make-xs-column(12);
+    font-size:@font-size-small/1.125;
+    
+    .list-group-item {
+      font-variant:small-caps;
+      span.badge { font-size:@font-size-small/1.125; }
+    }   
+  }

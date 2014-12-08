@@ -1,0 +1,138 @@
+/* Elements du design qui ne dépendent pas d'un emplacement dans le code Html */
+
+  // NAVBARTOP
+  #navbartop {
+    .visible-xs();
+    .visible-sm();
+  }
+  
+  // SOCIALICONS : icones de reseaux sociaux
+  .socialicons {
+    .text-center();
+    a {
+      display:inline-block;
+      height:66px;
+      width:70px;
+      background-image:url(/wp-content/themes/rock-gilleshoarau/img/social_icons.png);
+      background-repeat:no-repeat;
+      margin:0 @padding-small-horizontal/2;
+      span {
+        .hidden();
+      }
+    }
+    a.twitter {
+      background-position:-70px 0;
+    }
+    a.google {
+      background-position:-140px 0;
+    }
+    a.blog {
+      background-position:center right;
+    }
+  }
+  aside.navigation {
+    .socialicons {
+      .text-center();
+      a {
+        display:inline-block;
+        height:66px;
+        width:70px;
+        background-image:url(/wp-content/themes/rock-gilleshoarau/img/social_icons.png);
+        background-repeat:no-repeat;
+        margin:0 @padding-small-horizontal/2;
+        span {
+          .hidden();
+        }
+      }
+      a.twitter {
+        background-position:-70px 0;
+      }
+      a.google {
+        background-position:-140px 0;
+      }
+      a.blog {
+        background-position:center right;
+      }
+    }
+  }
+  
+  // BUTTONSNAV : boutons de bas de page utilises pour la navigation
+  .buttonsnav {
+    margin:@line-height-base*2.5em 0;
+    .btn-default {
+      .text-left();
+      padding:@padding-base-vertical @padding-large-horizontal;
+    }
+    a.contact {
+      background:@brand-primary;
+    }
+  }
+  
+
+  // WIDGETS  
+  section.widget {
+    .make-xs-column(12);
+    font-size:@font-size-small/1.125;
+    
+    .list-group-item {
+      font-variant:small-caps;
+      span.badge { font-size:@font-size-small/1.125; }
+    }   
+  }
+  
+  // VCARD
+  .vcard {
+    margin:@padding-base-vertical @padding-base-horizontal; margin-bottom:@padding-base-vertical/2; padding:@padding-base-vertical 0;
+  }
+
+  // GIF WONDER
+  .gifwonder {
+    position:relative;
+    overflow:hidden;
+    width:800px;
+    height:600px;
+      
+    section.art-vignette {
+      margin:0;
+      padding:0;
+      
+      img {
+        width:445px;
+        height:342px;  
+      }
+    }
+    
+    .vision {
+      position:absolute;
+      top:75px;
+      left:93px;
+      overflow:hidden;
+      .size(445px,342px);
+    }
+    
+    .tele {
+      .size(800px,600px);
+      position:absolute;
+      top:0;
+      left:0;
+      background:url(/senzu/gilleshoarau.com/tv.png); 
+    }
+  }
+  
+  .gifwonderlink {
+    display:block;
+    margin:2em 0;
+  }
+  
+  article.insta {
+    .make-lg-column(6);
+    h1 { .hidden() }
+  }
+  
+  .uppercase {
+    text-transform:uppercase;
+  }
+  
+  hr.top {
+    border:1px dotted @ivColorBlue3;
+  }

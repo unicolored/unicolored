@@ -28,33 +28,53 @@ Thumbs.db
 .vagrant
 
 # Wordpress
-*/htdocs/wc-logs/
-*/htdocs/wp-admin/
-*/htdocs/wp-includes/
-*/htdocs/wp-*.php
-*/htdocs/xmlrpc.php
+htdocs/wc-logs/
+htdocs/wp-admin/
+htdocs/wp-includes/
+htdocs/wp-*.php
+htdocs/xmlrpc.php
 
-*/htdocs/wp-content/cache/
+htdocs/wp-content/cache/
 !htdocs/wp-content/cache/.htaccess
-*/htdocs/wp-content/ewww/
-*/htdocs/wp-content/languages/
-*/htdocs/wp-content/plugins/
-*/htdocs/wp-content/upgrade/
-*/htdocs/wp-content/uploads/
-*/htdocs/wp-content/wppa-depot/
-*/htdocs/wp-content/*.php
+htdocs/wp-content/ewww/
+htdocs/wp-content/languages/
+htdocs/wp-content/plugins/
+htdocs/wp-content/upgrade/
+htdocs/wp-content/uploads/
+htdocs/wp-content/wppa-depot/
+htdocs/wp-content/*.php
 
-*/htdocs/wp-content/themes/*.php
+htdocs/wp-content/themes/*.php
 
 myhost.json
 
-*/htdocs/index.php
-*/htdocs/license.txt
-*/htdocs/*.html
-*/htdocs/apiservice/
-*/htdocs/kersley/
-*/htdocs/le-chat/
-*/htdocs/rastared/
-*/htdocs/senzu/
+htdocs/index.php
+htdocs/license.txt
+htdocs/*.html
 
 htdocs/.htaccess
+
+# dev Wordpress
+dev/htdocs/wc-logs/
+dev/htdocs/wp-admin/
+dev/htdocs/wp-includes/
+dev/htdocs/wp-*.php
+dev/htdocs/xmlrpc.php
+
+dev/htdocs/wp-content/cache/
+dev/!htdocs/wp-content/cache/.htaccess
+dev/htdocs/wp-content/ewww/
+dev/htdocs/wp-content/languages/
+dev/htdocs/wp-content/plugins/
+dev/htdocs/wp-content/upgrade/
+dev/htdocs/wp-content/uploads/
+dev/htdocs/wp-content/wppa-depot/
+dev/htdocs/wp-content/*.php
+
+dev/htdocs/wp-content/themes/*.php
+
+dev/htdocs/index.php
+dev/htdocs/license.txt
+dev/htdocs/*.html
+
+dev/htdocs/.htaccess

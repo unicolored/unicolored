@@ -3,9 +3,9 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="fr-FR" prefix="og: http://ogp.me/ns#"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="fr-FR" prefix="og: http://ogp.me/ns#"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="fr-FR" prefix="og: http://ogp.me/ns#" data-ng-app="totoro" manifest="offline.appcache">
+<html class="no-js" lang="fr-FR" prefix="og: http://ogp.me/ns#" data-ng-app="unicolored" manifest="offline.appcache">
 <!--<![endif]-->
-    <head prefix="gilles: https://www.gilleshoarau.com/">
+    <head prefix="gilles: https://www.unicolored.com/">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
@@ -14,21 +14,21 @@
             <?php wp_title( '|', true, 'right'); ?>
         </title>
         <meta property="og:title" content="Gilles Hoarau" />
-        <meta name="description" content="Directeur artistique. Paris Xème. Le conseil, la cr&#xe9;ation visuelle et la conception de sites Web &#xe0; votre disposition. Parlons de vos projets."
+        <meta name="description" content="Tendances Graphic et Web Design"
         />
-        <meta property="og:description" content="Directeur artistique. Paris Xème. Le conseil, la cr&#xe9;ation visuelle et la conception de sites Web &#xe0; votre disposition. Parlons de vos projets."
+        <meta property="og:description" content="Tendances Graphic et Web Design"
         />
-        <link rel="canonical" href="https://www.gilleshoarau.com/" />
-        <meta property="og:url" content="https://www.gilleshoarau.com/" />
+        <link rel="canonical" href="https://www.unicolored.com/" />
+        <meta property="og:url" content="https://www.unicolored.com/" />
         <meta property="og:site_name" content="Gilles Hoarau" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:type" content="gilles:website" />
         <meta property="og:updated_time" content="gilles:website" />
         <meta name="author" content="Gilles Hoarau" />
-        <link rel="alternate" type="application/rss+xml" title="Gilles Hoarau &raquo; Flux du site GillesHoarau.com"
-        href="http://feeds.feedburner.com/gilleshoarau" />
+        <link rel="alternate" type="application/rss+xml" title="Gilles Hoarau &raquo; Flux du site unicolored.com"
+        href="http://feeds.feedburner.com/unicolored" />
         <?php gh_head() ?>
-        <link rel="shortlink" href="http://bit.ly/GillesH" />
+        <link rel="shortlink" href="http://bit.ly/1uwKbh0" />
         <link rel="image_src" href="/img/ico/gravatar.<?php echo wp_get_theme()->Version ?>.jpg" />
         <meta property="og:image" content="/img/ico/gravatar.<?php echo wp_get_theme()->Version ?>.jpg" />
         <link rel="shortcut icon" href="/img/ico/favicon.<?php echo wp_get_theme()->Version ?>.ico" />
@@ -40,5 +40,4 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body <?php body_class( 'rock'); ?>>
-        <div id="top"></div>
+    <body>

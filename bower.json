@@ -1,0 +1,42 @@
+{
+  "name": "Rock UniColored",
+  "version": "0.0.02",
+  "authors": [
+    "Gilles H <unicolored@gmail.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_compenents",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.6",
+    "json3": "~3.3.2",
+    "es5-shim": "~2.1.0",
+    "angular-file-upload": "~1.1.5",
+    "angular-local-storage": "~0.1.5",
+    "angular-animate": "~1.2.0",
+    "angular-touch": "~1.2.0",
+    "angular-route": "~1.2.0",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.0",
+    "angular-scenario": "~1.2.0"
+  },
+  "appPath": "htdocs",
+  "resolutions": {
+    "es5-shim": ">=3.4.0",
+    "angular": "~1.2.11"
+  }
+}

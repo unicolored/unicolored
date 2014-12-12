@@ -90,20 +90,20 @@ function ScriptsLocaux() {
     // SCRIPTS ET CSS EN DEVELOPPEMENT LOCAL
     // CSS
     //wp_enqueue_style('style-bootstrap', '/devassets/css/bootstrap.css', false, null, 'all');
-    wp_enqueue_style('style-style', '/devassets/css/theme.css', false, null, 'all');
+    wp_enqueue_style('style-style', get_stylesheet_directory_uri().'/style.css', false, null, 'all');
     // JS
     wp_enqueue_script('myjquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', false, null, true);
     wp_enqueue_script('bower_concat', get_stylesheet_directory_uri().'/dev/js/tmp/bower_concat.js', array('myjquery'), null, true);
-    wp_enqueue_script('jquery-ui', get_stylesheet_directory_uri().'/dev/js/jquery-ui-custom.js', array('myjquery'), null, true);
-    wp_enqueue_script('script_nicescroll', get_stylesheet_directory_uri().'/dev/js/scripts/script_nicescroll.js', false, null, true);
     // Angular
-    wp_enqueue_script('scriptsglobaux', get_stylesheet_directory_uri().'/dev/js/totoro.js', false, null, true);
-    wp_enqueue_script('directives', get_stylesheet_directory_uri().'/dev/js/angular/navbot.js', false, null, true);
-    wp_enqueue_script('controllers', get_stylesheet_directory_uri().'/dev/js/angular/contact.js', false, null, true);
-    wp_enqueue_script('carousel', get_stylesheet_directory_uri().'/dev/js/angular/carousel.js', false, null, true);
-    wp_enqueue_script('portfolio', get_stylesheet_directory_uri().'/dev/js/angular/portfolio.js', false, null, true);
-    wp_enqueue_script('console', get_stylesheet_directory_uri().'/dev/js/angular/console.js', false, null, true);
-    wp_enqueue_script('modal', get_stylesheet_directory_uri().'/dev/js/angular/modal.js', false, null, true);
+    wp_enqueue_script('scriptsglobaux', get_stylesheet_directory_uri().'/dev/js/unicolored.js', false, null, true);
+    /*
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/hammerjs/hammer.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    */
+    wp_enqueue_script('unicolored', get_stylesheet_directory_uri().'/dev/js/unicolored.js', false, null, true);
 }
 function ScriptsProd() {
     // SCRIPTS EN PRODUCTION

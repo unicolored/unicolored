@@ -9,6 +9,7 @@ node_modules
 
 # Ignore config
 dev/yesimlocal.php
+lib/
 tmp/
 dev/screenshots/
 htdocs/wp-content/themes/rock-gilleshoarau/dev/

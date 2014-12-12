@@ -55,26 +55,26 @@ htdocs/*.html
 htdocs/.htaccess
 
 # dev Wordpress
-dev/htdocs/wc-logs/
-dev/htdocs/wp-admin/
-dev/htdocs/wp-includes/
-dev/htdocs/wp-*.php
-dev/htdocs/xmlrpc.php
+dev/wc-logs/
+dev/wp-admin/
+dev/wp-includes/
+dev/wp-*.php
+dev/xmlrpc.php
 
-dev/htdocs/wp-content/cache/
+dev/wp-content/cache/
 dev/!htdocs/wp-content/cache/.htaccess
-dev/htdocs/wp-content/ewww/
-dev/htdocs/wp-content/languages/
-dev/htdocs/wp-content/plugins/
-dev/htdocs/wp-content/upgrade/
-dev/htdocs/wp-content/uploads/
-dev/htdocs/wp-content/wppa-depot/
-dev/htdocs/wp-content/*.php
+dev/wp-content/ewww/
+dev/wp-content/languages/
+dev/wp-content/plugins/
+dev/wp-content/upgrade/
+dev/wp-content/uploads/
+dev/wp-content/wppa-depot/
+dev/wp-content/*.php
 
-dev/htdocs/wp-content/themes/*.php
+dev/wp-content/themes/*.php
 
-dev/htdocs/index.php
-dev/htdocs/license.txt
-dev/htdocs/*.html
+dev/index.php
+dev/license.txt
+dev/*.html
 
-dev/htdocs/.htaccess
+dev/.htaccess

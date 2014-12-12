@@ -11,10 +11,9 @@ node_modules
 dev/yesimlocal.php
 lib/
 tmp/
+ssl/
 dev/screenshots/
-htdocs/wp-content/themes/bodyrock/
-htdocs/wp-content/themes/bodyrock-child/
-htdocs/wp-content/themes/rock-unicomonde/
+
 
 
 # Operating system files

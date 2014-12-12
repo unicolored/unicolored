@@ -1,0 +1,50 @@
+<nav id="navbarbot" class="navbar navbar-inverse navbar-fixed-bottom " role="navigation">
+    <noscript>
+        <div class="navbar-text">Activer Javascript pour bénéficier de fonctionnalités supplémentaires.</div>
+    </noscript>
+    <ul class="nav navbar-nav">
+        <li class="launcher" data-launcher="Launcher" data-ng-click="openClose('launcher')">
+            <a class="text-center" itemscope itemtype="http://schema.org/Brand" style="cursor:pointer">
+                <img itemprop="logo" class="logo" src="https://gilleshoarau.com/wp-content/themes/rock-gilleshoarau/img/logo.svg"
+                height="40" width="40" alt="GH" />
+            </a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav taskbar">
+        <li data-ng:repeat="app in appList | filter: isOpen | orderBy:['position']">
+            <a href="#" data-ng:click="loadApp(app.name)">
+                <span class="icon-{{app.icone}}"></span> {{app.nicename}}
+                <small class="hide">#{{app.position}}</small>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li data-start="opacity:0.1" data-1000="opacity:1">
+            <a id="gotop" title="Retour en haut de la page" href="#top" data-go:Top="Retour en haut de page">
+            </a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right notifzone">
+        <li class="langues" data-ng-click="openClose('langues')">
+            <span class="padd">
+                <span class="icon-tongue text-info"></span>
+            </span>
+        </li>
+        <li class="parametres" data-ng-click="openClose('parametres')">
+            <span class="padd">
+                <span class="icon-feed {{connexionClass}}"></span>
+            </span>
+        </li>
+        <li class="horloge" data-horloge="Horloge" data-ng-click="openClose('horloge')">
+            <span class="padd">
+                <span class="icon-clock"></span>
+            </span>
+        </li>
+    </ul>
+    <div class="launchers">
+        <div data-menu:launcher="menuLauncher"></div>
+        <div data-menu:horloge="menuHorloge"></div>
+        <div data-menu:langues="menuLangues"></div>
+        <div data-menu:parametres="menuParametres"></div>
+    </div>
+</nav>

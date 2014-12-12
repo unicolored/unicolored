@@ -1,0 +1,9 @@
+@import "bswatch/unicomonde/variables.less";
+body#tinymce.wp-editor {
+  background: #fff;
+  color: ;
+  font-size: ;
+}
+body#tinymce.wp-editor a {
+  color: ;
+}

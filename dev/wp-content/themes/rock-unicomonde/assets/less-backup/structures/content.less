@@ -1,0 +1,67 @@
+.window {
+	padding-top:@line-height-computed*0.5em;
+	
+	.media {			
+		.make-lg-column(4);
+		margin:0; margin-bottom:@line-height-base*1.5em;
+		
+		article {
+			border-bottom:1px solid lighten(@body-bg,5%);
+			padding:0 @line-height-base*1em;	
+			height:250px;
+			overflow:hidden;
+			
+			header {				
+				.thumbnail {
+					height:150px;
+					overflow:hidden;
+					border-color:lighten(@body-bg,5%);
+					box-shadow:#000 0px 2px 8px;
+				}
+				
+				h1 {
+					font-size:@font-size-small;
+				}
+			}
+		}
+		
+		.panel {
+			background:#eee;
+			
+			header {
+				h1 {
+					.police1;
+					font-size:@font-size-large*3em;
+					
+					margin-left:@line-height-base*0.5em;
+					
+					a {
+						color:#222;
+					}
+				}
+				
+				a.vignette { display:block; overflow:hidden; }
+			}
+			
+			.panel-body {
+				font-size:@font-size-base*1.6em;
+			}
+			
+		}
+		
+		&.active {
+			header {
+				color:@brand-primary;
+				
+				a { color:@brand-primary; }
+			}
+			.thumbnail {
+				border-color:@brand-primary;
+			}
+		}
+	}
+}
+	
+.rubriques {
+	.hidden-xs();
+}

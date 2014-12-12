@@ -10,6 +10,8 @@ node_modules
 # Ignore config
 dev/yesimlocal.php
 tmp/
+ssl/
+test/
 dev/screenshots/
 htdocs/wp-content/themes/rock-gilleshoarau/dev/
 
@@ -26,33 +28,33 @@ Thumbs.db
 .vagrant
 
 # Wordpress
-htdocs/wc-logs/
-htdocs/wp-admin/
-htdocs/wp-includes/
-htdocs/wp-*.php
-htdocs/xmlrpc.php
+*/htdocs/wc-logs/
+*/htdocs/wp-admin/
+*/htdocs/wp-includes/
+*/htdocs/wp-*.php
+*/htdocs/xmlrpc.php
 
-htdocs/wp-content/cache/
+*/htdocs/wp-content/cache/
 !htdocs/wp-content/cache/.htaccess
-htdocs/wp-content/ewww/
-htdocs/wp-content/languages/
-htdocs/wp-content/plugins/
-htdocs/wp-content/upgrade/
-htdocs/wp-content/uploads/
-htdocs/wp-content/wppa-depot/
-htdocs/wp-content/*.php
+*/htdocs/wp-content/ewww/
+*/htdocs/wp-content/languages/
+*/htdocs/wp-content/plugins/
+*/htdocs/wp-content/upgrade/
+*/htdocs/wp-content/uploads/
+*/htdocs/wp-content/wppa-depot/
+*/htdocs/wp-content/*.php
 
-htdocs/wp-content/themes/*.php
+*/htdocs/wp-content/themes/*.php
 
 myhost.json
 
-htdocs/index.php
-htdocs/license.txt
-htdocs/*.html
-htdocs/apiservice/
-htdocs/kersley/
-htdocs/le-chat/
-htdocs/rastared/
-htdocs/senzu/
+*/htdocs/index.php
+*/htdocs/license.txt
+*/htdocs/*.html
+*/htdocs/apiservice/
+*/htdocs/kersley/
+*/htdocs/le-chat/
+*/htdocs/rastared/
+*/htdocs/senzu/
 
 htdocs/.htaccess

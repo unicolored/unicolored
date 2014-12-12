@@ -96,6 +96,13 @@ module.exports = function( grunt ) {
                 }
             }
         },
+        sass: {
+          dist: {
+            files: {
+              'dev/css/gilles.css': 'lib/material/themes/gilles-theme.scss',
+            }
+          }
+        },
         /*
         ########   ## ##       ######  ##     ## ########  ##
         ##         ## ##      ##    ## ##     ## ##     ## ##
@@ -774,8 +781,8 @@ module.exports = function( grunt ) {
                 hostname: 'gilleshoarau.com',
                 livereload: 35729,
                 base: '',
-                key: grunt.file.read( 'monserveur.key' ).toString(),
-                cert: grunt.file.read( 'certificate-96884.crt' ).toString()
+                //key: grunt.file.read( 'monserveur.key' ).toString(),
+                //cert: grunt.file.read( 'certificate-96884.crt' ).toString()
             },
             livereload: {
                 options: {
@@ -783,8 +790,8 @@ module.exports = function( grunt ) {
                     //open:true,
                     //protocol: 'https',
                     base: '<%= gh.dist %>',
-                    key: grunt.file.read( 'monserveur.key' ),
-                    cert: grunt.file.read( 'certificate-96884.crt' )
+                    //key: grunt.file.read( 'monserveur.key' ),
+                    //cert: grunt.file.read( 'certificate-96884.crt' )
                 }
             },
             test: {

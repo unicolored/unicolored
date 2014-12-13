@@ -395,7 +395,7 @@ module.exports = function( grunt ) {
                     cwd: '<%= gh.temppath %>uploads/2014',
                     src: [ '**/*.jpg' ],
                     dest: '<%= gh.temppath %>uploads2/2014'
-    } ],
+                } ]
             },
             images: {
                 options: {

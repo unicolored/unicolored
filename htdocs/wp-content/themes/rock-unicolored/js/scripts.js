@@ -13,9 +13,23 @@ Supports drag-n-drop upload, upload progress, validation filters and a file uplo
 When files are selected or dropped into the component, one or more filters are applied. Files which pass all filters are added to the queue. When file is added to the queue, for him is created instance of {FileItem} and uploader options are copied into this object. After, items in the queue (FileItems) are ready for uploading.
 */
 // CONFIG
-unicolored.config( function() {
+unicolored.config( [ '$routeProvider', function( $routeProvider ) {
     'use strict';
-} );
+    $routeProvider.when( '/', {
+        templateUrl: '/wp-content/themes/rock-unicolored/dev/js/views/home.html',
+        controller: 'BonjourController'
+    } ).when( '/about', {
+        templateUrl: '/wp-content/themes/rock-unicolored/dev/js/views/about.html',
+        //controller: 'AboutCtrl'
+    } ).when( '/article/:type/:id', {
+        templateUrl: function( params ) {
+            return '/wp-content/themes/rock-unicolored/dev/js/views/article-' + params.type + '.html';
+        },
+        controller: 'ArticleController'
+    } ).otherwise( {
+        redirectTo: '/'
+    } );
+} ] );
 // RUN
 unicolored.run( function() {
     'use strict';
@@ -23,12 +37,32 @@ unicolored.run( function() {
 unicolored.controller( 'BonjourController', [ '$scope', '$http', function( $scope, $http ) {
     'use strict';
     $scope.world = 'Gilles';
-    $scope.articles = [];
+    $scope.articlesA = [];
+    $scope.articlesB = [];
+    $scope.articlesC = [];
+    $scope.articlesD = [];
+    $scope.loading = true;
     $http( {
         method: 'GET',
         url: '/wp-json/posts/',
     } ).success( function( data, status ) {
-        $scope.articles = data;
+        $scope.articlesA = data.slice( 0, 13 );
+        $scope.articlesB = data.slice( 12, 25 );
+        $scope.articlesC = data.slice( 24, 37 );
+        $scope.loading = false;
         console.log( status );
+    } );
+} ] );
+unicolored.controller( 'ArticleController', [ '$scope', '$http', '$routeParams', function( $scope, $http, $routeParams ) {
+    'use strict';
+    $scope.world = 'Gilles';
+    $scope.articlesA = [];
+    console.log( $routeParams.id );
+    $http( {
+        method: 'GET',
+        url: '/wp-json/posts/' + $routeParams.id,
+    } ).success( function( data, status ) {
+        $scope.article = data;
+        console.log( data );
     } );
 } ] );

@@ -41,10 +41,9 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body data-ng:controller="BonjourController">
+    <body>
       <md-toolbar>
         <h2 class="md-toolbar-tools">
           <span>unicolored</span> <md-button ng-href="/#/" class="md-raised md-primary">Home</md-button>
         </h2>
       </md-toolbar>
-      

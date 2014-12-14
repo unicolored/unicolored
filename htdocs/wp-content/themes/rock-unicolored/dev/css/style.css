@@ -80,12 +80,6 @@ md-bottom-sheet.md-gilles-theme .md-subheader {
   background-color: transparent;
   cursor: not-allowed;
 }
-md-card.md-gilles-theme {
-  border-radius: 2px;
-}
-md-card.md-gilles-theme .md-card-image {
-  border-radius: 2px 2px 0 0;
-}
 md-checkbox.md-gilles-theme .md-ripple {
   color: #43a047;
 }
@@ -106,6 +100,12 @@ md-checkbox.md-gilles-theme[disabled] .md-icon {
 }
 md-checkbox.md-gilles-theme[disabled].md-checked .md-icon {
   background-color: rgba(0, 0, 0, 0.26);
+}
+md-card.md-gilles-theme {
+  border-radius: 2px;
+}
+md-card.md-gilles-theme .md-card-image {
+  border-radius: 2px 2px 0 0;
 }
 md-content.md-gilles-theme {
   background-color: #ffffff;
@@ -136,6 +136,37 @@ md-progress-circular.md-gilles-theme .md-inner .md-right .md-half-circle {
 }
 md-progress-circular.md-gilles-theme .md-inner .md-left .md-half-circle {
   border-left-color: #f33534;
+}
+md-radio-button.md-gilles-theme .md-off,
+md-switch.md-gilles-theme .md-switch-thumb .md-off {
+  border-color: rgba(0, 0, 0, 0.54);
+}
+md-radio-button.md-gilles-theme .md-on,
+md-switch.md-gilles-theme .md-switch-thumb .md-on {
+  background-color: rgba(102, 187, 106, 0.87);
+}
+md-radio-button.md-gilles-theme.md-checked .md-off,
+md-switch.md-gilles-theme .md-switch-thumb.md-checked .md-off {
+  border-color: rgba(102, 187, 106, 0.87);
+}
+md-radio-button.md-gilles-theme.md-checked .md-ink-ripple,
+md-switch.md-gilles-theme .md-switch-thumb.md-checked .md-ink-ripple {
+  color: rgba(102, 187, 106, 0.87);
+}
+md-radio-button.md-gilles-theme .md-container .md-ripple,
+md-switch.md-gilles-theme .md-switch-thumb .md-container .md-ripple {
+  color: #43a047;
+}
+md-radio-button.md-gilles-theme[disabled] .md-container .md-off,
+md-switch.md-gilles-theme .md-switch-thumb[disabled] .md-container .md-off {
+  border-color: rgba(0, 0, 0, 0.26);
+}
+md-radio-button.md-gilles-theme[disabled] .md-container .md-on,
+md-switch.md-gilles-theme .md-switch-thumb[disabled] .md-container .md-on {
+  border-color: rgba(0, 0, 0, 0.26);
+}
+md-radio-group.md-gilles-theme:focus {
+  border-color: rgba(0, 0, 0, 0.73);
 }
 md-progress-linear.md-gilles-theme .md-container {
   background-color: #ffcec6;
@@ -186,43 +217,27 @@ md-slider.md-gilles-theme[disabled] .md-thumb:after {
 md-slider.md-gilles-theme[disabled]:not(.md-min) .md-thumb:after {
   background-color: #bdbdbd;
 }
-md-radio-button.md-gilles-theme .md-off,
-md-switch.md-gilles-theme .md-switch-thumb .md-off {
-  border-color: rgba(0, 0, 0, 0.54);
+md-tabs.md-gilles-theme .md-header {
+  background-color: #f33534;
 }
-md-radio-button.md-gilles-theme .md-on,
-md-switch.md-gilles-theme .md-switch-thumb .md-on {
-  background-color: rgba(102, 187, 106, 0.87);
+md-tabs.md-gilles-theme md-tabs-ink-bar {
+  color: #ffff85;
+  background: #ffff85;
 }
-md-radio-button.md-gilles-theme.md-checked .md-off,
-md-switch.md-gilles-theme .md-switch-thumb.md-checked .md-off {
-  border-color: rgba(102, 187, 106, 0.87);
+md-tabs.md-gilles-theme md-tab {
+  color: #ffcec6;
 }
-md-radio-button.md-gilles-theme.md-checked .md-ink-ripple,
-md-switch.md-gilles-theme .md-switch-thumb.md-checked .md-ink-ripple {
-  color: rgba(102, 187, 106, 0.87);
+md-tabs.md-gilles-theme md-tab.active {
+  color: white;
 }
-md-radio-button.md-gilles-theme .md-container .md-ripple,
-md-switch.md-gilles-theme .md-switch-thumb .md-container .md-ripple {
-  color: #43a047;
+md-tabs.md-gilles-theme md-tab[disabled] {
+  color: rgba(0, 0, 0, 0.12);
 }
-md-radio-button.md-gilles-theme[disabled] .md-container .md-off,
-md-switch.md-gilles-theme .md-switch-thumb[disabled] .md-container .md-off {
-  border-color: rgba(0, 0, 0, 0.26);
-}
-md-radio-button.md-gilles-theme[disabled] .md-container .md-on,
-md-switch.md-gilles-theme .md-switch-thumb[disabled] .md-container .md-on {
-  border-color: rgba(0, 0, 0, 0.26);
-}
-md-radio-group.md-gilles-theme:focus {
+md-tabs.md-gilles-theme md-tab:focus {
   border-color: rgba(0, 0, 0, 0.73);
 }
-.md-subheader.md-gilles-theme {
-  color: rgba(0, 0, 0, 0.54);
-  background-color: #ffffff;
-}
-.md-subheader.md-gilles-theme.md-primary {
-  color: #f33534;
+md-tabs.md-gilles-theme md-tab .md-ripple-container {
+  color: #ffff85;
 }
 md-switch.md-gilles-theme .md-thumb {
   background-color: #fafafa;
@@ -246,27 +261,28 @@ md-switch.md-gilles-theme:focus .md-text {
   border-color: black;
   border-style: dotted;
 }
-md-tabs.md-gilles-theme .md-header {
-  background-color: #f33534;
-}
-md-tabs.md-gilles-theme md-tabs-ink-bar {
-  color: #ffff85;
-  background: #ffff85;
-}
-md-tabs.md-gilles-theme md-tab {
-  color: #ffcec6;
-}
-md-tabs.md-gilles-theme md-tab.active {
+md-toast.md-gilles-theme {
+  background-color: #323232;
   color: white;
 }
-md-tabs.md-gilles-theme md-tab[disabled] {
-  color: rgba(0, 0, 0, 0.12);
+md-toast.md-gilles-theme .md-button {
+  color: white;
 }
-md-tabs.md-gilles-theme md-tab:focus {
-  border-color: rgba(0, 0, 0, 0.73);
+md-toast.md-gilles-theme .md-action {
+  color: #ff4171;
 }
-md-tabs.md-gilles-theme md-tab .md-ripple-container {
-  color: #ffff85;
+md-toolbar.md-gilles-theme {
+  background-color: #f33534;
+  color: white;
+}
+md-toolbar.md-gilles-theme .md-button {
+  color: white;
+}
+md-tooltip.md-gilles-theme {
+  color: #ffffff;
+}
+md-tooltip.md-gilles-theme .md-background {
+  background-color: rgba(0, 0, 0, 0.52);
 }
 md-input-group.md-gilles-theme input,
 md-input-group.md-gilles-theme textarea {
@@ -305,26 +321,10 @@ md-input-group.md-gilles-theme[disabled] textarea {
   color: rgba(0, 0, 0, 0.26);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.19) 0%, rgba(0, 0, 0, 0.19) 50%, rgba(0, 0, 0, 0) 0%);
 }
-md-toast.md-gilles-theme {
-  background-color: #323232;
-  color: white;
+.md-subheader.md-gilles-theme {
+  color: rgba(0, 0, 0, 0.54);
+  background-color: #ffffff;
 }
-md-toast.md-gilles-theme .md-button {
-  color: white;
-}
-md-toast.md-gilles-theme .md-action {
-  color: #ff4171;
-}
-md-toolbar.md-gilles-theme {
-  background-color: #f33534;
-  color: white;
-}
-md-toolbar.md-gilles-theme .md-button {
-  color: white;
-}
-md-tooltip.md-gilles-theme {
-  color: #ffffff;
-}
-md-tooltip.md-gilles-theme .md-background {
-  background-color: rgba(0, 0, 0, 0.52);
+.md-subheader.md-gilles-theme.md-primary {
+  color: #f33534;
 }

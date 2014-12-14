@@ -41,6 +41,7 @@ htdocs/wp-content/upgrade/
 htdocs/wp-content/uploads/
 htdocs/wp-content/wppa-depot/
 htdocs/wp-content/themes/rock-unicolored/dev/
+htdocs/wp-content/themes/rock-unicolored/img/material-design-icons/
 htdocs/wp-content/*.php
 
 htdocs/wp-content/themes/*.php

@@ -8,12 +8,10 @@ node_modules
 .*/
 
 # Ignore config
-dev/yesimlocal.php
 lib/
 tmp/
 ssl/
 dev/screenshots/
-
 
 
 # Operating system files
@@ -42,6 +40,7 @@ htdocs/wp-content/plugins/
 htdocs/wp-content/upgrade/
 htdocs/wp-content/uploads/
 htdocs/wp-content/wppa-depot/
+htdocs/wp-content/themes/rock-unicolored/dev/
 htdocs/wp-content/*.php
 
 htdocs/wp-content/themes/*.php

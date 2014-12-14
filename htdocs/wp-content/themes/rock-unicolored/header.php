@@ -44,6 +44,6 @@
     <body>
       <md-toolbar>
         <h2 class="md-toolbar-tools">
-          <span>unicolored</span> <md-button ng-href="/#/" class="md-raised md-primary">Home</md-button>
+          <span>unicolored</span> <md-button ng-href="/#/" class="md-raised md-primary">Home</md-button> <md-button ng-href="/#/about" class="md-raised md-primary">About</md-button>
         </h2>
       </md-toolbar>

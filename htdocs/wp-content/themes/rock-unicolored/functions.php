@@ -93,7 +93,7 @@ function ScriptsLocaux() {
     wp_enqueue_style('style-style', get_stylesheet_directory_uri().'/style.css', false, null, 'all');
     // JS
     wp_enqueue_script('myjquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', false, null, true);
-    wp_enqueue_script('bower_concat', get_stylesheet_directory_uri().'/dev/js/tmp/bower_concat.js', array('myjquery'), null, true);
+    wp_enqueue_script('bower-concat', get_stylesheet_directory_uri().'/dev/js/tmp/bower-concat.js', array('myjquery'), null, true);
     // Angular
     wp_enqueue_script('scriptsglobaux', get_stylesheet_directory_uri().'/dev/js/unicolored.js', false, null, true);
     /*

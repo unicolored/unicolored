@@ -20,7 +20,7 @@ module.exports = function( grunt ) {
         gh: {
             /* VARIABLES DU PROJET */
             app: require( './bower.json' ).appPath || '',
-            themename: 'Uniolored',
+            themename: 'Unicolored',
             themeuri: 'https://www.unicolored.com',
             themeauthor: 'Gilles Hoarau',
             themeauthoruri: 'https://www.unicolored.com',
@@ -36,13 +36,13 @@ module.exports = function( grunt ) {
             devpath: 'dev/',
             temppath: 'tmp/',
             /* ASSETS */
-            htmlAssets: [],
+            htmlAssets: [ '<%= gh.temppath %>html/front-page.html' ],
             cssFonts: [ '<%= gh.temppath %>fonts/font1.css', '<%= gh.temppath %>fonts/font2.css', '<%= gh.temppath %>fonts/font3.css' ],
-            jsAssets: [ '<%= gh.devpath %>js/unicolored.js', '<%= gh.devpath %>js/angular/*.js' ],
+            jsAssets: [ '<%= gh.devpath %>js/unicolored.js' ],
             jsScripts: [ '<%= gh.devpath %>js/scripts/analytics.js' ],
             iconsSet: '<%= gh.libspath %>elusive-iconfont/css/elusive-webfont.css'
         },
-        humansTxt: {
+        humans_txt: {
             externalFile: {
                 options: {
                     intro: 'Bonjour, ça va ?',
@@ -129,7 +129,7 @@ module.exports = function( grunt ) {
                 browsers: [ 'last 2 versions', 'ie 8', 'ie 9' ]
             },
             theme: {
-                src: '<%= gh.assetspath %>css/theme.css',
+                src: '<%= gh.assetspath %>css/style.css',
                 dest: '<%= gh.assetspath %>css/theme.ap.css'
             },
         },
@@ -140,7 +140,7 @@ module.exports = function( grunt ) {
                     banner: '/*\nTheme Name: <%= gh.themename %>\nTheme URI: <%= gh.themeuri %>\nDescription: <%= pkg.description %>\nAuthor: <%= gh.themeauthor %>\nAuthorURI: <%= gh.themeauthoruri %>\nTemplate: <%= gh.themetemplate %>\nVersion: <%= pkg.version %>\nText Domain: <%= gh.themetextdomain %>\n*/'
                 },
                 files: {
-                    '<%= gh.themepath %>style.css': [ '<%= gh.assetspath %>fonts/font1.css', '<%= gh.assetspath %>fonts/font2.css', '<%= gh.assetspath %>fonts/font3.css', '<%= gh.assetspath %>css/icons.ap.css', '<%= gh.assetspath %>css/bootstrap.ap.css', '<%= gh.assetspath %>css/theme.ap.css' ]
+                    '<%= gh.themepath %>style.css': [ '<%= gh.assetspath %>fonts/font1.css', '<%= gh.assetspath %>fonts/font2.css', '<%= gh.assetspath %>fonts/font3.css', '<%= gh.assetspath %>css/icons.ap.css', '<%= gh.devpath %>css/bower-concat.css', '<%= gh.assetspath %>css/theme.ap.css' ]
                 }
             }
         },
@@ -190,7 +190,8 @@ module.exports = function( grunt ) {
             },
             app1: {
                 files: {
-                    '<%= gh.devpath %>js/tmp/unicolored.js': [ '<%= gh.devpath %>js/unicolored.js' ]
+                    '<%= gh.devpath %>js/tmp/unicolored.js': [ '<%= gh.devpath %>js/unicolored.js' ],
+                    '<%= gh.devpath %>js/tmp/bower-concat.js': [ '<%= gh.devpath %>js/tmp/bower-concat.js' ]
                 }
             }
         },
@@ -200,7 +201,7 @@ module.exports = function( grunt ) {
             },
             my_target: {
                 files: {
-                    '<%= gh.themepath %>js/scripts.min.js': [ '<%= gh.themepath %>js/scripts.js' ],
+                    '<%= gh.themepath %>js/scripts.min.js': [ '<%= gh.devpath %>js/tmp/bower-concat.js', '<%= gh.themepath %>js/scripts.js' ],
                 }
             },
         },
@@ -221,15 +222,17 @@ module.exports = function( grunt ) {
                 dest: '<%= gh.devpath %>js/tmp/bower-concat.js',
                 // je ne charge pas les css de bower actuellement
                 cssDest: '<%= gh.devpath %>css/bower-concat.css',
-                exclude: [ 'angular-animate' ],
-                //dependencies: {},
+                exclude: [ 'angular', 'angular-mocks', 'angular-scenario' ],
+                /*dependencies: {
+                    'angular-animate': 'angular',
+                },*/
                 bowerOptions: {
                     relative: false
-                },
-                mainFiles: {
-                    'angular-file-upload': [ 'angular-file-upload.min.js' ],
-                    'angular-animate': [ 'angular-animate.min.js' ]
                 }
+                /*,
+                                mainFiles: {
+                                    'angular-animate': [ 'angular-animate.min.js' ]
+                                }*/
             },
         },
         // CONCATENATION JS
@@ -245,7 +248,7 @@ module.exports = function( grunt ) {
             },
             dist: {
                 files: {
-                    '<%= gh.themepath %>js/scripts.js': [ '<%= gh.devpath %>js/tmp/bower-concat.js', '<%= gh.devpath %>js/tmp/unicolored.js', '<%= gh.devpath %>js/tmp/angular/*.js', '<%= gh.jsScripts %>' ]
+                    '<%= gh.themepath %>js/scripts.js': [ '<%= gh.devpath %>js/tmp/unicolored.js' ]
                 }
             },
         },
@@ -805,14 +808,13 @@ module.exports = function( grunt ) {
                     grunt.task.run( [ 'clean:yesimlocal', 'copy:webapp' ] );
                 break;
         }
-        //grunt.task.run( [ 'curl:fonts1', 'curl:fonts2', 'curl:fonts3', 'copy:libsFonts' ] );
     } );
     // MES TACHES
     grunt.registerTask( 'reloadFonts', function( target ) {
-        grunt.task.run( [ 'curl:fonts1', 'curl:fonts2', 'curl:fonts3', 'copy:libsFonts' ] );
+        grunt.task.run( [ 'curl:fonts1', 'curl:fonts2', 'curl:fonts3' ] );
     } );
     grunt.registerTask( 'reloadCss', function( target ) {
-        grunt.task.run( [ 'less', 'autoprefixer:theme', 'autoprefixer:iconsset', 'cssmin' ] );
+        grunt.task.run( [ 'less', 'autoprefixer:theme', 'cssmin' ] );
     } );
     grunt.registerTask( 'reloadJs', function( target ) {
         grunt.task.run( [ 'curl:ga', 'jsbeautifier', 'jshint', 'ngAnnotate', 'concat', 'uglify' ] );
@@ -828,7 +830,7 @@ module.exports = function( grunt ) {
     } );
     ///// ETAPE DE RELEASE
     grunt.registerTask( 'release', function( target ) {
-        grunt.task.run( [ 'humansTxt', 'reloadFonts', 'reloadCss', 'reloadJs', 'copy:versioningImg', 'reloadImg' /*, 'reloadHtml'*/ , 'pagespeed', 'copy:changelog', 'clean:changelog', 'changelog', 'copy:versioning', 'dev:prod' ] );
+        grunt.task.run( [ 'humans_txt', 'reloadFonts', 'reloadCss', 'bower_concat', 'reloadJs', 'copy:versioningImg', 'reloadImg' /*, 'reloadHtml'*/ , 'pagespeed', 'copy:changelog', 'clean:changelog', 'changelog', 'copy:versioning', 'dev:prod' ] );
     } );
     grunt.registerTask( 'production', function( target ) {
         grunt.task.run( [ 'release' ] );

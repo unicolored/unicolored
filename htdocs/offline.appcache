@@ -1,17 +1,17 @@
 CACHE MANIFEST
-# v1.7.3
+# v0.0.10
 
 CACHE:
-#/webapp/webapp.1.7.3.html
-#/wp-content/themes/rock-gilleshoarau/style.1.7.3.css
-#/wp-content/themes/rock-gilleshoarau/js/scripts.1.7.3.min.js
-#/wp-content/themes/rock-gilleshoarau/img/ico/16.1.7.3.png
-#/wp-content/themes/rock-gilleshoarau/img/ico/48.1.7.3.png
-#/wp-content/themes/rock-gilleshoarau/img/ico/128.1.7.3.png
-#/wp-content/themes/rock-gilleshoarau/img/ico/144.1.7.3.png
-#/wp-content/themes/rock-gilleshoarau/img/ico/favicon.1.7.3.ico
-#/wp-content/themes/rock-gilleshoarau/img/ico/gravatar.1.7.3.jpg
-#/wp-content/themes/rock-gilleshoarau/img/ico/logo.1.7.3.svg
+#/webapp/webapp.0.0.10.html
+#/wp-content/themes/rock-gilleshoarau/style.0.0.10.css
+#/wp-content/themes/rock-gilleshoarau/js/scripts.0.0.10.min.js
+#/wp-content/themes/rock-gilleshoarau/img/ico/16.0.0.10.png
+#/wp-content/themes/rock-gilleshoarau/img/ico/48.0.0.10.png
+#/wp-content/themes/rock-gilleshoarau/img/ico/128.0.0.10.png
+#/wp-content/themes/rock-gilleshoarau/img/ico/144.0.0.10.png
+#/wp-content/themes/rock-gilleshoarau/img/ico/favicon.0.0.10.ico
+#/wp-content/themes/rock-gilleshoarau/img/ico/gravatar.0.0.10.jpg
+#/wp-content/themes/rock-gilleshoarau/img/ico/logo.0.0.10.svg
 
 NETWORK:
 *

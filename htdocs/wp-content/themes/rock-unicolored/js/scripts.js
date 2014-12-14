@@ -1,4 +1,4 @@
-/*! unicolored.com - v0.0.21 - 14-12-2014 [FR] */
+/*! unicolored.com - v0.0.21 - 15-12-2014 [FR] */
 //####dev/js/tmp/unicolored.js
 /*!
 unicolored */
@@ -16,14 +16,14 @@ When files are selected or dropped into the component, one or more filters are a
 unicolored.config( [ '$routeProvider', function( $routeProvider ) {
     'use strict';
     $routeProvider.when( '/', {
-        templateUrl: '/wp-content/themes/rock-unicolored/dev/js/views/home.html',
+        templateUrl: '/wp-content/themes/rock-unicolored/js/views/home.html',
         controller: 'BonjourController'
     } ).when( '/about', {
-        templateUrl: '/wp-content/themes/rock-unicolored/dev/js/views/about.html',
+        templateUrl: '/wp-content/themes/rock-unicolored/js/views/about.html',
         //controller: 'AboutCtrl'
     } ).when( '/article/:type/:id', {
         templateUrl: function( params ) {
-            return '/wp-content/themes/rock-unicolored/dev/js/views/article-' + params.type + '.html';
+            return '/wp-content/themes/rock-unicolored/js/views/article-' + params.type + '.html';
         },
         controller: 'ArticleController'
     } ).otherwise( {
@@ -34,6 +34,12 @@ unicolored.config( [ '$routeProvider', function( $routeProvider ) {
 unicolored.run( function() {
     'use strict';
 } );
+unicolored.controller( 'ToolbarController', [ '$scope', '$location', function( $scope, $location ) {
+    'use strict';
+    this.isHome = function() {
+        return $location.path() == '/';
+    }
+} ] );
 unicolored.controller( 'BonjourController', [ '$scope', '$http', function( $scope, $http ) {
     'use strict';
     $scope.world = 'Gilles';

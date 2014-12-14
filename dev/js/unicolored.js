@@ -32,6 +32,12 @@ unicolored.config( [ '$routeProvider', function( $routeProvider ) {
 unicolored.run( function() {
     'use strict';
 } );
+unicolored.controller( 'ToolbarController', [ '$scope', '$location', function( $scope, $location ) {
+    'use strict';
+    this.isHome = function() {
+        return $location.path() == '/';
+    }
+} ] );
 unicolored.controller( 'BonjourController', [ '$scope', '$http', function( $scope, $http ) {
     'use strict';
     $scope.world = 'Gilles';

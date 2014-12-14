@@ -562,7 +562,7 @@ module.exports = function( grunt ) {
             // STYLES
             lessEdited: { // Au changement d'un fichier .less, on appelle la tâche de compilation
                 files: [ '<%= gh.devpath %>less/{,*/,*/*/}*.less' ],
-                tasks: [ 'less:style', 'cssmin:devtheme' ],
+                tasks: [ 'less:style' ],
             },
             // VIEWS
             views: { // Au changement d'un fichier .less, on appelle la tâche de compilation
@@ -776,32 +776,32 @@ module.exports = function( grunt ) {
         ########   ## ##       ######     ##    ##     ## ######## #### ##    ## ##    ##
         */
         symlink: {
-          // Enable overwrite to delete symlinks before recreating them
-          options: {
-            overwrite: true
-          },
-          // The "build/target.txt" symlink will be created and linked to
-          // "source/target.txt". It should appear like this in a file listing:
-          // build/target.txt -> ../source/target.txt
-          /*
-          explicit: {
-            src: 'source/target.txt',
-            dest: 'build/target.txt'
-          },*/
-          // These examples using "expand" to generate src-dest file mappings:
-          // http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically
-          dev: {
-            files: [
+            // Enable overwrite to delete symlinks before recreating them
+            options: {
+                overwrite: true
+            },
+            // The "build/target.txt" symlink will be created and linked to
+            // "source/target.txt". It should appear like this in a file listing:
+            // build/target.txt -> ../source/target.txt
+            /*
+            explicit: {
+              src: 'source/target.txt',
+              dest: 'build/target.txt'
+            },*/
+            // These examples using "expand" to generate src-dest file mappings:
+            // http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically
+            dev: {
+                files: [
             // All child files and directories in "source", starting with "foo-" will
             // be symlinked into the "build" directory, with the leading "source"
             // stripped off.
 
-            {
-              expand: true,
-              overwrite: false,
-              cwd: 'dev',
-              src: ['*'],
-              dest: 'htdocs/wp-content/themes/rock-unicolored/dev'
+                    {
+                        expand: true,
+                        overwrite: false,
+                        cwd: 'dev',
+                        src: [ '*' ],
+                        dest: 'htdocs/wp-content/themes/rock-unicolored/dev'
             },
             // All child directories in "source" will be symlinked into the "build"
             // directory, with the leading "source" stripped off.
@@ -815,7 +815,7 @@ module.exports = function( grunt ) {
               filter: 'isDirectory'
             }*/
             ]
-          },
+            },
         }
     } );
     /*************************************************************************************************************************************************/

@@ -31,6 +31,7 @@
         <!-- default themes and core styles -->
         <link rel="stylesheet" href="/wp-content/themes/rock-unicolored/dev/css/bower-concat.css">
         <!-- extra, overriding theme files -->
+        <link rel="stylesheet" href="/wp-content/themes/rock-unicolored/img/material-design-icons/css-sprite/sprite-navigation-white.css">
         <link rel="stylesheet" href="/wp-content/themes/rock-unicolored/dev/css/style.css">
         <!-- /wp_head -->
         <link rel="shortlink" href="http://bit.ly/1uwKbh0" />
@@ -46,8 +47,15 @@
         <![endif]-->
     </head>
     <body>
-      <md-toolbar>
-        <h2 class="md-toolbar-tools">
-          <span>unicolored</span> <md-button ng-href="/#/" class="md-raised md-primary">Home</md-button> <md-button ng-href="/#/about" class="md-raised md-primary">About</md-button>
-        </h2>
-      </md-toolbar>
+      <div data-ng:controller="ToolbarController as toolbar">
+          <md-toolbar>
+              <h2 class="md-toolbar-tools">
+                  <a href="/#/" ng-show="toolbar.isHome()">
+                      <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/navigation/svg/production/ic_apps_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                  </a>
+                  <a href="/#/" ng-show="!toolbar.isHome()">
+                      <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/navigation/svg/production/ic_arrow_back_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                  </a>
+              </h2>
+          </md-toolbar>
+      </div>

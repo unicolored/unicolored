@@ -1,17 +1,15 @@
 <?php get_header(YESWEARE); ?>
 <div class="br_bonjour index">
     <?php // Placer le code Html ci-dessous ?>
-    <md-content class="md-padding">
+    <md-content>
 
-          <md-card ng-repeat="article in articles" ng-init="loadArticles()" class="article portfolio <?php echo (isset($id_current) && $id_current==get_the_ID()) ? 'currentpost' : false ?>" id="post-<?php echo get_the_ID() ?>" itemscope="" itemtype="http://schema.org/CreativeWork">
-            <a href="{{article.link}}" class="image-{{article.ID}}">
-                <img ng-src="{{article.featured_image.source}}" class="md-card-image" alt="Washed Out">
-            </a>
-            <h5 itemprop="name"><a href="<?php the_permalink() ?>" ng-bind-html="article.title"></a></h5>
-            <div itemprop="about" ng-bind-html="article.excerpt">
-            </div>
-          </md-card>
 
+      <div ng-view="">
+
+
+
+
+</div>
             <?php
             /*
             $args='posts_per_page=12&post_status=publish';

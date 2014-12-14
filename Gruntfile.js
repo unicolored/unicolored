@@ -78,13 +78,6 @@ module.exports = function( grunt ) {
                 compress: false,
                 yuicompress: false,
             },
-            // COMPILATION des deux fichiers .less principaux : bootstrap et style
-            wordpress: {
-                files: {
-                    //"<%= gh.assetspath %>css/bootstrap.css": "<%= gh.devpath %>less/bootstrap.less",
-                    '<%= gh.assetspath %>css/styles-login.css': '<%= gh.devpath %>less/login-style.less'
-                }
-            },
             style: {
                 files: {
                     '<%= gh.assetspath %>css/style.css': '<%= gh.devpath %>less/style.less',
@@ -570,6 +563,11 @@ module.exports = function( grunt ) {
             lessEdited: { // Au changement d'un fichier .less, on appelle la tâche de compilation
                 files: [ '<%= gh.devpath %>less/{,*/,*/*/}*.less' ],
                 tasks: [ 'less:style', 'cssmin:devtheme' ],
+            },
+            // VIEWS
+            views: { // Au changement d'un fichier .less, on appelle la tâche de compilation
+                files: [ '<%= gh.devpath %>js/views/{,*/,*/*/}*.html' ],
+                //tasks: [ 'less:style', 'cssmin:devtheme' ],
             },
             // SCRIPTS
             scriptsEdited: {

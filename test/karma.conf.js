@@ -19,7 +19,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-      'dev/js/tmp/bower_concat.js',
+      'dev/js/tmp/bower-concat.js',
       'bower_components/angular-mocks/angular-mocks.js',
       //'bower_components/angular-scenario/angular-scenario.js',
       'dev/js/scripts/script_nicescroll.js',

@@ -10,8 +10,8 @@ module.exports = function( grunt ) {
     // Mozjpeg est un compresseur d'images
     // Il est utilisé par le plugin grunt-imagemin pour compresser les jpeg.
     var mozjpeg = require( 'imagemin-mozjpeg' );
-    var jpegRecompress = require( 'imagemin-jpeg-recompress' );
-    var jpegoptim = require( 'imagemin-jpegoptim' );
+    //var jpegRecompress = require( 'imagemin-jpeg-recompress' );
+    //var jpegoptim = require( 'imagemin-jpegoptim' );
     // Config
     grunt.initConfig( {
         /*************************************************************************************************************************************************/
@@ -20,32 +20,32 @@ module.exports = function( grunt ) {
         gh: {
             /* VARIABLES DU PROJET */
             app: require( './bower.json' ).appPath || '',
-            themename: 'Rock Gilles Hoarau',
-            themeuri: 'https://www.gilleshoarau.com',
+            themename: 'Unicolored',
+            themeuri: 'https://www.unicolored.com',
             themeauthor: 'Gilles Hoarau',
-            themeauthoruri: 'https://www.gilleshoarau.com',
+            themeauthoruri: 'https://www.unicolored.com',
             themetemplate: 'bodyrock',
-            themetextdomain: 'rock-gilleshoarau',
+            themetextdomain: 'rock-unicolored',
             /* PATHS */
             mainsitepath: 'htdocs/',
             contentpath: 'htdocs/wp-content/',
-            themepath: 'htdocs/wp-content/themes/rock-gilleshoarau/',
-            relativethemepath: 'wp-content/themes/rock-gilleshoarau/',
+            themepath: 'htdocs/wp-content/themes/rock-unicolored/',
+            relativethemepath: 'wp-content/themes/rock-unicolored/',
             libspath: 'bower_components/',
             assetspath: 'htdocs/devassets/',
             devpath: 'dev/',
             temppath: 'tmp/',
             /* ASSETS */
-            htmlAssets: [ '<%= gh.temppath %>html/front-page.html', '<%= gh.temppath %>html/services.html', '<%= gh.temppath %>html/projets.html', '<%= gh.temppath %>html/contact.html', '<%= gh.temppath %>html/single.html' ],
+            htmlAssets: [ '<%= gh.temppath %>html/front-page.html' ],
             cssFonts: [ '<%= gh.temppath %>fonts/font1.css', '<%= gh.temppath %>fonts/font2.css', '<%= gh.temppath %>fonts/font3.css' ],
-            jsAssets: [ '<%= gh.devpath %>js/totoro.js', '<%= gh.devpath %>js/angular/*.js' ],
-            jsScripts: [ '<%= gh.devpath %>js/scripts/script_nicescroll.js', '<%= gh.devpath %>js/scripts/analytics.js' ],
+            jsAssets: [ '<%= gh.devpath %>js/unicolored.js' ],
+            jsScripts: [ '<%= gh.devpath %>js/scripts/analytics.js' ],
             iconsSet: '<%= gh.libspath %>elusive-iconfont/css/elusive-webfont.css'
         },
         humans_txt: {
-            external_file: {
+            externalFile: {
                 options: {
-                    intro: "Bonjour, ça va ?",
+                    intro: 'Bonjour, ça va ?',
                     commentStyle: 'u',
                     content: grunt.file.readJSON( 'humans.json' ),
                     includeUpdateIn: 'string',
@@ -82,26 +82,14 @@ module.exports = function( grunt ) {
             wordpress: {
                 files: {
                     //"<%= gh.assetspath %>css/bootstrap.css": "<%= gh.devpath %>less/bootstrap.less",
-                    "<%= gh.assetspath %>css/styles-login.css": "<%= gh.devpath %>less/login-style.less"
+                    '<%= gh.assetspath %>css/styles-login.css': '<%= gh.devpath %>less/login-style.less'
                 }
             },
             style: {
                 files: {
-                    "<%= gh.assetspath %>css/style.css": "<%= gh.devpath %>less/style.less",
+                    '<%= gh.assetspath %>css/style.css': '<%= gh.devpath %>less/style.less',
                 }
             },
-            snake: {
-                files: {
-                    "<%= gh.mainsitepath %>apps/snake/snake.css": "<%= gh.devpath %>less/apps/snake.less"
-                }
-            }
-        },
-        sass: {
-          dist: {
-            files: {
-              'dev/css/gilles.css': 'lib/material/themes/gilles-theme.scss',
-            }
-          }
         },
         /*
         ########   ## ##       ######  ##     ## ########  ##
@@ -140,17 +128,8 @@ module.exports = function( grunt ) {
             options: {
                 browsers: [ 'last 2 versions', 'ie 8', 'ie 9' ]
             },
-            iconsset: {
-                src: '<%= gh.iconsSet %>',
-                dest: '<%= gh.assetspath %>css/icons.ap.css'
-            },
-            /*,
-                        bootstrap: {
-                          src: '<%= gh.assetspath %>css/bootstrap.css',
-                          dest: '<%= gh.assetspath %>css/bootstrap.ap.css'
-                        }*/
             theme: {
-                src: '<%= gh.assetspath %>css/theme.css',
+                src: '<%= gh.assetspath %>css/style.css',
                 dest: '<%= gh.assetspath %>css/theme.ap.css'
             },
         },
@@ -161,15 +140,7 @@ module.exports = function( grunt ) {
                     banner: '/*\nTheme Name: <%= gh.themename %>\nTheme URI: <%= gh.themeuri %>\nDescription: <%= pkg.description %>\nAuthor: <%= gh.themeauthor %>\nAuthorURI: <%= gh.themeauthoruri %>\nTemplate: <%= gh.themetemplate %>\nVersion: <%= pkg.version %>\nText Domain: <%= gh.themetextdomain %>\n*/'
                 },
                 files: {
-                    "<%= gh.themepath %>style.css": [ "<%= gh.assetspath %>fonts/font1.css", "<%= gh.assetspath %>fonts/font2.css", "<%= gh.assetspath %>fonts/font3.css", "<%= gh.assetspath %>css/icons.ap.css", "<%= gh.assetspath %>css/bootstrap.ap.css", "<%= gh.assetspath %>css/theme.ap.css" ]
-                }
-            },
-            devtheme: {
-                options: {
-                    banner: '/*\nTheme Name: <%= gh.themename %>\nTheme URI: <%= gh.themeuri %>\nDescription: <%= pkg.description %>\nAuthor: <%= gh.themeauthor %>\nAuthorURI: <%= gh.themeauthoruri %>\nTemplate: <%= gh.themetemplate %>\nVersion: <%= pkg.version %>\nText Domain: <%= gh.themetextdomain %>\n*/'
-                },
-                files: {
-                    "<%= gh.assetspath %>css/theme.css": [ "<%= gh.devpath %>css/icomoon.css", "<%= gh.assetspath %>css/style.css" ]
+                    '<%= gh.themepath %>style.css': [ '<%= gh.assetspath %>fonts/font1.css', '<%= gh.assetspath %>fonts/font2.css', '<%= gh.assetspath %>fonts/font3.css', '<%= gh.assetspath %>css/icons.ap.css', '<%= gh.devpath %>css/bower-concat.css', '<%= gh.assetspath %>css/theme.ap.css' ]
                 }
             }
         },
@@ -195,16 +166,13 @@ module.exports = function( grunt ) {
                 }
             },
             default: {
-                src: [ "<%= gh.devpath %>js/**/*.js" ],
+                src: [ '<%= gh.devpath %>js/**/*.js' ],
             },
             test: {
-                src: [ "test/spec/{,*/}*.js" ],
-            },
-            apps: {
-                src: [ "<%= gh.mainsitepath %>apps/{,*/}*.js" ],
+                src: [ 'test/spec/{,*/}*.js' ],
             },
             grunt: {
-                src: [ "Gruntfile.js" ]
+                src: [ 'Gruntfile.js' ]
             }
         },
         jshint: {
@@ -214,7 +182,7 @@ module.exports = function( grunt ) {
             //beforeconcat: '<%= gh.jsAssets %>',
             all: [ '<%= gh.devpath %>js/{angular}/*.js' ],
             grunt: [ 'Gruntfile.js' ],
-            apps: [ "<%= gh.mainsitepath %>apps/{,*/}*.js" ]
+            apps: [ '<%= gh.mainsitepath %>apps/{,*/}*.js' ]
         },
         ngAnnotate: {
             options: {
@@ -222,23 +190,10 @@ module.exports = function( grunt ) {
             },
             app1: {
                 files: {
-                    //'<%= gh.devpath %>js/tmp/bower_concat.js': [ '<%= gh.devpath %>js/tmp/bower_concat.js' ],
-                    '<%= gh.devpath %>js/tmp/totoro.js': [ '<%= gh.devpath %>js/totoro.js' ],
-                    '<%= gh.devpath %>js/tmp/angular/carousel.js': [ '<%= gh.devpath %>js/angular/carousel.js' ],
-                    '<%= gh.devpath %>js/tmp/angular/contact.js': [ '<%= gh.devpath %>js/angular/contact.js' ],
-                    '<%= gh.devpath %>js/tmp/angular/console.js': [ '<%= gh.devpath %>js/angular/console.js' ],
-                    '<%= gh.devpath %>js/tmp/angular/modal.js': [ '<%= gh.devpath %>js/angular/modal.js' ],
-                    '<%= gh.devpath %>js/tmp/angular/navbot.js': [ '<%= gh.devpath %>js/angular/navbot.js' ],
-                    '<%= gh.devpath %>js/tmp/angular/portfolio.js': [ '<%= gh.devpath %>js/angular/portfolio.js' ],
-                    '<%= gh.themepath %>js/scripts.js': [ '<%= gh.themepath %>js/scripts.js' ]
-                },
-            },
-            /*
-          snake: {
-          files: {
-          '<%= gh.devpath %>js/apps/snake.js': [ '<%= gh.devpath %>js/apps/snake.js' ],
-        },
-      }*/
+                    '<%= gh.devpath %>js/tmp/unicolored.js': [ '<%= gh.devpath %>js/unicolored.js' ],
+                    '<%= gh.devpath %>js/tmp/bower-concat.js': [ '<%= gh.devpath %>js/tmp/bower-concat.js' ]
+                }
+            }
         },
         uglify: {
             options: {
@@ -246,7 +201,7 @@ module.exports = function( grunt ) {
             },
             my_target: {
                 files: {
-                    '<%= gh.themepath %>js/scripts.min.js': [ '<%= gh.themepath %>js/scripts.js' ],
+                    '<%= gh.themepath %>js/scripts.min.js': [ '<%= gh.devpath %>js/tmp/bower-concat.js', '<%= gh.themepath %>js/scripts.js' ],
                 }
             },
         },
@@ -264,23 +219,20 @@ module.exports = function( grunt ) {
         // Concaténation devant être appellée par sécurité avant un build
         bower_concat: {
             all: {
-                dest: '<%= gh.devpath %>js/tmp/bower_concat.js',
+                dest: '<%= gh.devpath %>js/tmp/bower-concat.js',
                 // je ne charge pas les css de bower actuellement
-                cssDest: '<%= gh.temppath %>bower_concat.css',
-                exclude: [ 'json3', 'es5-shim', 'jquery', 'jquery-ui', 'angular-scenario', 'angular-mocks', 'angular-bootstrap', 'gmaps', 'jquery-ui', 'elusive-iconfont' ],
-                dependencies: {
-                    'jquery': 'angular',
-                    'jquery.easing': 'jquery',
-                    'bootstrap': 'jquery',
-                },
+                cssDest: '<%= gh.devpath %>css/bower-concat.css',
+                exclude: [ 'angular', 'angular-mocks', 'angular-scenario' ],
+                /*dependencies: {
+                    'angular-animate': 'angular',
+                },*/
                 bowerOptions: {
                     relative: false
-                },
-                mainFiles: {
-                    'angular': [ 'angular.min.js' ],
-                    'angular-local-storage': [ 'dist/angular-local-storage.min.js' ],
-                    'angular-file-upload': [ 'angular-file-upload.min.js' ],
                 }
+                /*,
+                                mainFiles: {
+                                    'angular-animate': [ 'angular-animate.min.js' ]
+                                }*/
             },
         },
         // CONCATENATION JS
@@ -296,29 +248,9 @@ module.exports = function( grunt ) {
             },
             dist: {
                 files: {
-                    '<%= gh.themepath %>js/scripts.js': [ '<%= gh.devpath %>js/jquery-ui-custom.js', '<%= gh.devpath %>js/tmp/bower_concat.js', '<%= gh.devpath %>js/tmp/totoro.js', '<%= gh.devpath %>js/tmp/angular/*.js', '<%= gh.jsScripts %>' ]
+                    '<%= gh.themepath %>js/scripts.js': [ '<%= gh.devpath %>js/tmp/unicolored.js' ]
                 }
             },
-            jqueryui: {
-                options: {
-                    separator: ' ',
-                    stripBanners: true,
-                    banner: '',
-                    process: function( src, filepath ) {
-                        return '\n//####' + filepath + '\n' + src;
-                    },
-                    nonull: true,
-                },
-                files: {
-                    '<%= gh.devpath %>js/jquery-ui-custom.js': [ '<%= gh.libspath %>jquery-ui/ui/core.js', '<%= gh.libspath %>jquery-ui/ui/widget.js', '<%= gh.libspath %>jquery-ui/ui/mouse.js', '<%= gh.libspath %>jquery-ui/ui/draggable.js', '<%= gh.libspath %>jquery-ui/ui/droppable.js', '<%= gh.libspath %>jquery-ui/ui/resizable.js', '<%= gh.libspath %>jquery-ui/ui/selectable.js', '<%= gh.libspath %>jquery-ui/ui/sortable.js', '<%= gh.libspath %>jquery-ui/ui/datepicker.js', '<%= gh.libspath %>jquery-ui/ui/i18n/datepicker-fr.js' ]
-                }
-            },
-            /*
-      snake: {
-      files: {
-      '<%= gh.mainsitepath %>apps/snake/snake.js': [ '<%= gh.devpath %>js/apps/snake-yahoo-dom-event.js', '<%= gh.devpath %>js/apps/snake-container-min.js', '<%= gh.devpath %>js/apps/snake.js' ]
-    }
-  },*/
         },
         /*
         ########   ## ##      #### ##     ##    ###     ######   ########  ######
@@ -395,7 +327,7 @@ module.exports = function( grunt ) {
                     cwd: '<%= gh.temppath %>uploads/2014',
                     src: [ '**/*.jpg' ],
                     dest: '<%= gh.temppath %>uploads2/2014'
-    } ],
+                } ]
             },
             images: {
                 options: {
@@ -442,12 +374,7 @@ module.exports = function( grunt ) {
         */
         /*************************************************************************************************************************************************/
         exec: {
-            front: 'curl -k https://www.gilleshoarau.com/ > <%= gh.temppath %>html/front-page.html',
-            services: 'curl -k https://www.gilleshoarau.com/a-propos/ > <%= gh.temppath %>html/services.html',
-            projets: 'curl -k https://www.gilleshoarau.com/projets/ > <%= gh.temppath %>html/projets.html',
-            contact: 'curl -k https://www.gilleshoarau.com/contact/ > <%= gh.temppath %>html/contact.html',
-            single: 'curl -k https://www.gilleshoarau.com/creation-3d-champagne-clerambault/ > <%= gh.temppath %>html/single.html',
-            application: 'curl -k https://www.gilleshoarau.com/ > <%= gh.mainsitepath %>application.html',
+            front: 'curl -k https://www.unicolored.com/ > <%= gh.temppath %>html/front-page.html'
         },
         prettify: {
             options: {
@@ -458,81 +385,10 @@ module.exports = function( grunt ) {
                 //unformatted: [ 'a', 'sub', 'sup', 'b', 'i', 'u' ]
                 unformatted: [ 'php' ]
             },
-            /*
-            one: {
-                src: '<%= gh.themepath %>assets/html/front-page.html',
-                dest: '<%= gh.themepath %>assets/html/front-page.pf.html'
-            },*/
             p404: {
                 src: '<%= gh.themepath %>404.php',
                 dest: '<%= gh.themepath %>404.php',
-            },
-            cprojets: {
-                src: '<%= gh.themepath %>category-projets.php',
-                dest: '<%= gh.themepath %>category-projets.php',
-            },
-            category: {
-                src: '<%= gh.themepath %>category.php',
-                dest: '<%= gh.themepath %>category.php',
-            },
-            footer: {
-                src: '<%= gh.themepath %>footer.php',
-                dest: '<%= gh.themepath %>footer.php',
-            },
-            front: {
-                src: '<%= gh.themepath %>front-page.php',
-                dest: '<%= gh.themepath %>front-page.php',
-            },
-            header: {
-                src: '<%= gh.themepath %>header.php',
-                dest: '<%= gh.themepath %>header.php',
-            },
-            headercache: {
-                src: '<%= gh.themepath %>header-cache.php',
-                dest: '<%= gh.themepath %>header-cache.php',
-            },
-            footercache: {
-                src: '<%= gh.themepath %>footer-cache.php',
-                dest: '<%= gh.themepath %>footer-cache.php',
-            },
-            index: {
-                src: '<%= gh.themepath %>index.php',
-                dest: '<%= gh.themepath %>index.php',
-            },
-            contact: {
-                src: '<%= gh.themepath %>page-contact.php',
-                dest: '<%= gh.themepath %>page-contact.php',
-            },
-            servicescompetences: {
-                src: '<%= gh.themepath %>page-servicescompetences.php',
-                dest: '<%= gh.themepath %>page-servicescompetences.php',
-            },
-            single: {
-                src: '<%= gh.themepath %>single.php',
-                dest: '<%= gh.themepath %>single.php',
-            },
-            // -------------- Views
-            views: {
-                expand: true,
-                cwd: '<%= gh.themepath %>js/navbot/',
-                ext: '.html',
-                src: [ '*.html' ],
-                dest: '<%= gh.themepath %>js/navbot/'
-            },
-            // -------------- Apps
-            apps: {
-                expand: true,
-                cwd: '<%= gh.mainsitepath %>apps/*/',
-                ext: '.html',
-                src: [ '*.html' ],
-                dest: '<%= gh.mainsitepath %>apps/*/'
-            },
-            // -------------- Tpl
-            /*
-            single: {
-                src: '<%= gh.themepath %>single.php',
-                dest: '<%= gh.themepath %>single.php',
-            }*/
+            }
         },
         htmlhint: {
             options: {
@@ -578,11 +434,6 @@ module.exports = function( grunt ) {
                 stoponerror: true,
                 doctype: 'HTML5',
                 charset: 'utf-8',
-                //remotePath: 'http://decodize.com/',
-                //remoteFiles: [ 'html/moving-from-wordpress-to-octopress/', 'css/site-preloading-methods/' ], //or
-                //remoteFiles: 'validation-files.json', // JSON file contains array of page paths.
-                //relaxerror: [ 'Bad value X-UA-Compatible for attribute http-equiv on element meta.' ] //ignores these errors
-                //serverUrl: 'http://validator.gh.com/'
             },
             files: {
                 src: '<%= gh.htmlAssets %>'
@@ -591,14 +442,11 @@ module.exports = function( grunt ) {
         pagespeed: {
             options: {
                 nokey: true,
-                //key : "AIzaSyBa68iLR7ludZoab6Wf9xYt0cPbKhsUgus",
-                url: "https://www.gilleshoarau.com"
+                url: "https://www.unicolored.com"
             },
             gh: {
                 options: {
-                    //paths: ["/"],
-                    //key : "AIzaSyBa68iLR7ludZoab6Wf9xYt0cPbKhsUgus",
-                    url: "https://www.gilleshoarau.com/",
+                    url: "https://www.unicolored.com/",
                     locale: "fr_FR",
                     strategy: "desktop",
                     threshold: 80
@@ -646,9 +494,6 @@ module.exports = function( grunt ) {
             screenshots: {
                 src: [ "./dev/screenshots/**/*.png" ]
             },
-            bodyRock: {
-                src: [ "./bodyRock/**/*" ]
-            },
             yesimlocal: {
                 src: [ "./dev/yesimlocal.php" ]
             },
@@ -666,18 +511,6 @@ module.exports = function( grunt ) {
         ########   ## ##      ########  ######## ##        ########  #######     ##
         */
         /*************************************************************************************************************************************************/
-        sftp: {
-            test: {
-                files: {
-                    "./": "*json"
-                },
-                options: {
-                    path: '/tmp/',
-                    config: 'myhost',
-                    showProgress: true
-                }
-            }
-        },
         // DIST
         changelog: {
             options: {
@@ -688,7 +521,7 @@ module.exports = function( grunt ) {
             originmaster: {
                 options: {
                     verbose: true,
-                    remote: 'origin',
+                    remote: 'gandi',
                     //cwd: "ssh+git://133080@git.dc0.gpaas.net"
                 }
             }
@@ -699,7 +532,7 @@ module.exports = function( grunt ) {
         },
         sshexec: {
             deploy: {
-                command: 'deploy gilleshoarau.com.git',
+                command: 'deploy www.unicolored.com.git',
                 options: {
                     config: 'myhost'
                 }
@@ -738,11 +571,6 @@ module.exports = function( grunt ) {
                 files: [ '<%= gh.devpath %>less/{,*/,*/*/}*.less' ],
                 tasks: [ 'less:style', 'cssmin:devtheme' ],
             },
-            // VIEWS
-            views: { // Au changement d'un fichier .less, on appelle la tâche de compilation
-                files: [ '<%= gh.themepath %>js/{navbot/,contact/}*.html' ],
-                tasks: [ 'prettify:views' ],
-            },
             // SCRIPTS
             scriptsEdited: {
                 options: {
@@ -756,12 +584,7 @@ module.exports = function( grunt ) {
             // LIVERELOAD : fichiers modifiés qui n'appellent pas d'autres tâches que le reload
             livereload: {
                 files: [ '<%= gh.themepath %>{,*/}*.php', 'htdocs/.htaccess' ]
-            },
-            // APPS
-            apps: { // Au changement d'un fichier .less, on appelle la tâche de compilation
-                files: [ '<%= gh.mainsitepath %>apps/{,*/}*.js', '<%= gh.mainsitepath %>apps/{,*/}*.html' ],
-                tasks: [ 'jsbeautifier:apps', 'jshint:apps', 'prettify:apps' ],
-            },
+            }
         },
         /*
         ########   ## ##       ######   #######  ##    ## ##    ## ########  ######  ########
@@ -778,7 +601,7 @@ module.exports = function( grunt ) {
             options: { // Port 8000 par défaut
                 protocol: 'https',
                 port: 9000,
-                hostname: 'gilleshoarau.com',
+                hostname: 'www.unicolored.com',
                 livereload: 35729,
                 base: '',
                 //key: grunt.file.read( 'monserveur.key' ).toString(),
@@ -786,7 +609,7 @@ module.exports = function( grunt ) {
             },
             livereload: {
                 options: {
-                    open: 'https://www.gilleshoarau.com/',
+                    open: 'https://www.unicolored.com/',
                     //open:true,
                     //protocol: 'https',
                     base: '<%= gh.dist %>',
@@ -813,7 +636,7 @@ module.exports = function( grunt ) {
                 port: 4444
             },
             your_target: {
-                src: 'https://www.gilleshoarau.com'
+                src: 'https://www.unicolored.com'
             }
         },
         /*
@@ -834,20 +657,8 @@ module.exports = function( grunt ) {
                     // optional config, must set either remote or local
                     remote: {
                         files: [ {
-                            src: "https://www.gilleshoarau.com/",
+                            src: "https://www.unicolored.com/",
                             dest: "front-page.png"
-                        }, {
-                            src: "https://www.gilleshoarau.com/a-propos",
-                            dest: "services.png"
-                        }, {
-                            src: "https://www.gilleshoarau.com/projets",
-                            dest: "portfolio.png"
-                        }, {
-                            src: "https://www.gilleshoarau.com/contact",
-                            dest: "contact.png"
-                        }, {
-                            src: "https://www.gilleshoarau.com/creation-3d-champagne-clerambault/",
-                            dest: "single.png"
                         } ],
                     },
                     local: {
@@ -879,48 +690,6 @@ module.exports = function( grunt ) {
         */
         // BODYROCK
         copy: {
-            bodyRock: {
-                files: [
-                    // makes all src relative to cwd
-                    {
-                        expand: true,
-                        cwd: 'htdocs/wp-content/themes/bodyrock/',
-                        src: [ '**' ],
-                        dest: './bodyRock/'
-                    },
-                ],
-            },
-            libsFonts: {
-                /*
-                files: [
-                    // makes all src relative to cwd
-                    {
-                        expand: true,
-                        cwd: '<%= gh.devpath %>fonts/',
-                        src: [ '**' ],
-                        dest: '<%= gh.theme %>fonts/'
-                    },
-                ],*/
-                files: [
-                // makes all src relative to cwd
-                    {
-                        src: '<%= gh.devpath %>fonts/icomoon.eot',
-                        dest: '<%= gh.themepath %>fonts/icomoon.<%= pkg.version %>.eot',
-                },
-                    {
-                        src: '<%= gh.devpath %>fonts/icomoon.woff',
-                        dest: '<%= gh.themepath %>fonts/icomoon.<%= pkg.version %>.woff',
-                },
-                    {
-                        src: '<%= gh.devpath %>fonts/icomoon.ttf',
-                        dest: '<%= gh.themepath %>fonts/icomoon.<%= pkg.version %>.ttf',
-                },
-                    {
-                        src: '<%= gh.devpath %>fonts/icomoon.svg',
-                        dest: '<%= gh.themepath %>fonts/icomoon.<%= pkg.version %>.svg',
-                },
-                ],
-            },
             changelog: {
                 files: [
                     // makes all src relative to cwd
@@ -998,37 +767,7 @@ module.exports = function( grunt ) {
               },
               ],
             },
-        },
-        /*
-        ##         ## ##      ########  ######## ########  ##          ###     ######  ########
-        ##         ## ##      ##     ## ##       ##     ## ##         ## ##   ##    ## ##
-        ##       #########    ##     ## ##       ##     ## ##        ##   ##  ##       ##
-        ##         ## ##      ########  ######   ########  ##       ##     ## ##       ######
-        ##       #########    ##   ##   ##       ##        ##       ######### ##       ##
-        ##         ## ##      ##    ##  ##       ##        ##       ##     ## ##    ## ##
-        ########   ## ##      ##     ## ######## ##        ######## ##     ##  ######  ########
-        */
-        /*
-        replace: {
-            example: {
-                src: [ 'dev/manifest.appcache' ], // source files array (supports minimatch)
-                dest: 'dev/', // destination directory or file
-                replacements: [ {
-                        from: '"version": "\d.\d.\d"', // string replacement
-                        to: '"version": "<%= pkg.version %>"'
-            }
-                    , {
-                                        from: /(f|F)(o{2,100})/g, // regex replacement ('Fooo' to 'Mooo')
-                                        to: 'M$2'
-                                }, {
-                                        from: 'Foo',
-                                        to: function( matchedWord ) { // callback replacement
-                                            return matchedWord + ' Bar';
-                                        }
-                                }
-                    ]
-            }
-        }*/
+        }
     } );
     /*************************************************************************************************************************************************/
     /*************************************************************************************************************************************************/
@@ -1069,14 +808,13 @@ module.exports = function( grunt ) {
                     grunt.task.run( [ 'clean:yesimlocal', 'copy:webapp' ] );
                 break;
         }
-        //grunt.task.run( [ 'curl:fonts1', 'curl:fonts2', 'curl:fonts3', 'copy:libsFonts' ] );
     } );
     // MES TACHES
     grunt.registerTask( 'reloadFonts', function( target ) {
-        grunt.task.run( [ 'curl:fonts1', 'curl:fonts2', 'curl:fonts3', 'copy:libsFonts' ] );
+        grunt.task.run( [ 'curl:fonts1', 'curl:fonts2', 'curl:fonts3' ] );
     } );
     grunt.registerTask( 'reloadCss', function( target ) {
-        grunt.task.run( [ 'less', 'autoprefixer:theme', 'autoprefixer:iconsset', 'cssmin' ] );
+        grunt.task.run( [ 'less', 'autoprefixer:theme', 'cssmin' ] );
     } );
     grunt.registerTask( 'reloadJs', function( target ) {
         grunt.task.run( [ 'curl:ga', 'jsbeautifier', 'jshint', 'ngAnnotate', 'concat', 'uglify' ] );
@@ -1092,7 +830,7 @@ module.exports = function( grunt ) {
     } );
     ///// ETAPE DE RELEASE
     grunt.registerTask( 'release', function( target ) {
-        grunt.task.run( [ 'humans_txt', 'reloadFonts', 'reloadCss', 'reloadJs', 'copy:versioningImg', 'reloadImg' /*, 'reloadHtml'*/ , 'pagespeed', 'copy:changelog', 'clean:changelog', 'changelog', 'copy:versioning', 'dev:prod' ] );
+        grunt.task.run( [ 'humans_txt', 'reloadFonts', 'reloadCss', 'bower_concat', 'reloadJs', 'copy:versioningImg', 'reloadImg' /*, 'reloadHtml'*/ , 'pagespeed', 'copy:changelog', 'clean:changelog', 'changelog', 'copy:versioning', 'dev:prod' ] );
     } );
     grunt.registerTask( 'production', function( target ) {
         grunt.task.run( [ 'release' ] );
@@ -1112,13 +850,4 @@ module.exports = function( grunt ) {
     } );
     // TACHE PAR DEFAUT
     grunt.registerTask( 'default', [ 'serve' ] );
-    // BODYROCK ************************
-    grunt.registerTask( 'bodyRock', function( target ) {
-        grunt.task.run( [ 'clean:bodyRock', 'copy:bodyRock' ] );
-    } );
-    // ************************
-    // TACHES EN COURS D'INTEGRATION :
-    grunt.registerTask( 'mochatest', function( target ) {
-        grunt.task.run( [ 'phantom', 'mocha' ] );
-    } );
 };

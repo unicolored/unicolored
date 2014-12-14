@@ -1,0 +1,22 @@
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+body {
+  background: #131d22 !important;
+}
+body form#loginform {
+  background: #081217 !important;
+  color: #d0d2d3 !important;
+}

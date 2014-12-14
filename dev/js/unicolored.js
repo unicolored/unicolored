@@ -1,6 +1,6 @@
 /*!
 unicolored */
-var unicolored = angular.module( 'unicolored', [ 'ngMaterial', 'ngAnimate', 'ngRoute', 'ngSanitize' ] );
+var unicolored = angular.module( 'unicolored', [ 'ngMaterial', 'ngRoute', 'ngSanitize', 'ngAria' ] );
 /*
 // LocalStorageModule //https://github.com/grevory/angular-local-storage
 An AngularJS module that gives you access to the browsers local storage with cookie fallback
@@ -22,11 +22,11 @@ unicolored.controller( 'BonjourController', [ '$scope', '$http', function( $scop
     'use strict';
     $scope.world = 'Gilles';
     $scope.articles = [];
-    var httpRequest = $http( {
+    $http( {
         method: 'GET',
         url: '/wp-json/posts/',
-        //data: mockDataForThisTest
     } ).success( function( data, status ) {
         $scope.articles = data;
+        console.log( status );
     } );
 } ] );

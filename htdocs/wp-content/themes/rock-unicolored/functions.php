@@ -92,16 +92,17 @@ function ScriptsLocaux() {
     //wp_enqueue_style('style-bootstrap', '/devassets/css/bootstrap.css', false, null, 'all');
     wp_enqueue_style('style-style', get_stylesheet_directory_uri().'/style.css', false, null, 'all');
     // JS
-    wp_enqueue_script('myjquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', false, null, true);
-    wp_enqueue_script('bower-concat', get_stylesheet_directory_uri().'/dev/js/tmp/bower-concat.js', array('myjquery'), null, true);
-    // Angular
-    wp_enqueue_script('scriptsglobaux', get_stylesheet_directory_uri().'/dev/js/unicolored.js', false, null, true);
+    wp_enqueue_script('angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js', false, null, true);
+    wp_enqueue_script('angular-material', '//ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.js', array('angular'), null, true);
+    wp_enqueue_script('bower-concat', get_stylesheet_directory_uri().'/dev/js/tmp/bower-concat.js', array('angular'), null, true);
     /*
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/angular-aria/angular-aria.js"></script>
-    <script src="/bower_components/angular-animate/angular-animate.js"></script>
-    <script src="/bower_components/hammerjs/hammer.js"></script>
-    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-aria.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-sanitize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.1.3/hammer.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.js"></script>
     */
     wp_enqueue_script('unicolored', get_stylesheet_directory_uri().'/dev/js/unicolored.js', false, null, true);
 }

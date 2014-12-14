@@ -8,7 +8,7 @@
 	Location: Paris, France FR
 
 # SITE
-	Version: 0.0.20
+	Version: 0.0.21
 	Site Url: https://www.unicolored.com/
 	Keywords: tendances, graphic, web, design
 	Language: French

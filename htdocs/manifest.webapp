@@ -1,0 +1,21 @@
+{
+  "version": "0.0.04",
+  "name": "UniColored",
+  "description": "Mes services en communication Print et Web",
+  "launch_path": "/webapp/webapp.0.0.0.html",
+  "appcache_path": "/offline.appcache",
+  "icons": {
+    "16": "/img/ico/16.1.7.3.png",
+    "48": "/img/ico/48.1.7.3.png",
+    "128": "/img/ico/128.1.7.3.png"
+  },
+  "developer": {
+    "name": "Gilles Hoarau",
+    "url": "https://www.gilleshoarau.com/directeur-artistique/"
+  },
+  "installs_allowed_from": ["*"],
+  "default_locale": "fr",
+  "permissions": {
+    "systemXHR": {"description": "."}
+  }
+}

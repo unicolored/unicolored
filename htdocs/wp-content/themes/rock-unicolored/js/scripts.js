@@ -1,7 +1,4 @@
 /*! unicolored.com - v0.0.04 - 14-12-2014 [FR] */
-//####dev/js/jquery-ui-custom.js
-
- 
 //####dev/js/tmp/bower-concat.js
 /**
  * @license AngularJS v1.3.6
@@ -6575,10 +6572,12 @@
                                 }
                                 break;
                             case NODE_TYPE_TEXT:
-                                /* Text Node */ addTextInterpolateDirective( directives, node.nodeValue );
+                                /* Text Node */
+                                addTextInterpolateDirective( directives, node.nodeValue );
                                 break;
                             case NODE_TYPE_COMMENT:
-                                /* Comment */ try {
+                                /* Comment */
+                                try {
                                     match = COMMENT_DIRECTIVE_REGEXP.exec( node.nodeValue );
                                     if ( match ) {
                                         nName = directiveNormalize( match[ 1 ] );
@@ -49770,10 +49769,12 @@ angular.module( 'ngMaterial', [ "ng", "ngAnimate", "ngAria", "material.core", "m
                                 }
                                 break;
                             case 3:
-                                /* Text Node */ addTextInterpolateDirective( directives, node.nodeValue );
+                                /* Text Node */
+                                addTextInterpolateDirective( directives, node.nodeValue );
                                 break;
                             case 8:
-                                /* Comment */ try {
+                                /* Comment */
+                                try {
                                     match = COMMENT_DIRECTIVE_REGEXP.exec( node.nodeValue );
                                     if ( match ) {
                                         nName = directiveNormalize( match[ 1 ] );
@@ -77691,7 +77692,39 @@ angular.module( 'ngMaterial', [ "ng", "ngAnimate", "ngAria", "material.core", "m
     }
 }.call( this ) );
  
-//####dev/js/tmp/totoro.js
+//####dev/js/tmp/unicolored.js
+/*!
+unicolored */
+var unicolored = angular.module( 'unicolored', [ 'ngMaterial', 'ngAnimate', 'ngRoute', 'ngSanitize' ] );
+/*
+// LocalStorageModule //https://github.com/grevory/angular-local-storage
+An AngularJS module that gives you access to the browsers local storage with cookie fallback
+*/
+/*
+// angularFileUpload // https://github.com/nervgh/angular-file-upload
+Supports drag-n-drop upload, upload progress, validation filters and a file upload queue. It supports native HTML5 uploads, but degrades to a legacy iframe upload method for older browsers. Works with any server side platform which supports standard HTML form uploads.
+When files are selected or dropped into the component, one or more filters are applied. Files which pass all filters are added to the queue. When file is added to the queue, for him is created instance of {FileItem} and uploader options are copied into this object. After, items in the queue (FileItems) are ready for uploading.
+*/
+// CONFIG
+unicolored.config( function() {
+    'use strict';
+} );
+// RUN
+unicolored.run( function() {
+    'use strict';
+} );
+unicolored.controller( 'BonjourController', [ '$scope', '$http', function( $scope, $http ) {
+    'use strict';
+    $scope.world = 'Gilles';
+    $scope.articles = [];
+    var httpRequest = $http( {
+        method: 'GET',
+        url: '/wp-json/posts/',
+        //data: mockDataForThisTest
+    } ).success( function( data, status ) {
+        $scope.articles = data;
+    } );
+} ] );
  
 //####dev/js/tmp/angular/carousel.js
  

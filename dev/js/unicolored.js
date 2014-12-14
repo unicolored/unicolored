@@ -14,14 +14,14 @@ When files are selected or dropped into the component, one or more filters are a
 unicolored.config( [ '$routeProvider', function( $routeProvider ) {
     'use strict';
     $routeProvider.when( '/', {
-        templateUrl: '/wp-content/themes/rock-unicolored/dev/js/views/home.html',
+        templateUrl: '/wp-content/themes/rock-unicolored/js/views/home.html',
         controller: 'BonjourController'
     } ).when( '/about', {
-        templateUrl: '/wp-content/themes/rock-unicolored/dev/js/views/about.html',
+        templateUrl: '/wp-content/themes/rock-unicolored/js/views/about.html',
         //controller: 'AboutCtrl'
     } ).when( '/article/:type/:id', {
         templateUrl: function( params ) {
-            return '/wp-content/themes/rock-unicolored/dev/js/views/article-' + params.type + '.html';
+            return '/wp-content/themes/rock-unicolored/js/views/article-' + params.type + '.html';
         },
         controller: 'ArticleController'
     } ).otherwise( {

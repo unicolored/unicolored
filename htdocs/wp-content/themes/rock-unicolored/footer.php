@@ -11,7 +11,7 @@
 
 
     <!-- Your custom JavaScript code -->
-    <script src="/wp-content/themes/rock-unicolored/dev/js/unicolored.js"></script>
+    <script src="/wp-content/themes/rock-unicolored/js/scripts.min.js"></script>
 
     <!--<script type="text/javascript" src="/wp-content/themes/rock-unicolored/js/scripts.<?php echo wp_get_theme()->Version ?>.min.js"></script>-->
 

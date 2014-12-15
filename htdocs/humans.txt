@@ -12,4 +12,4 @@
 	Site Url: https://www.unicolored.com/
 	Keywords: tendances, graphic, web, design
 	Language: French
-	Last Update: 2014-12-14
+	Last Update: 2014-12-15

@@ -27,6 +27,7 @@
         <meta name="author" content="Gilles Hoarau" />
         <link rel="alternate" type="application/rss+xml" title="Gilles Hoarau &raquo; Flux du site unicolored.com"
         href="http://feeds.feedburner.com/unicolored" />
+        <link rel="stylesheet" href="/wp-content/themes/rock-unicolored/img/material-design-icons/css-sprite/sprite-navigation-white.css">
         <link rel="stylesheet" id="style-child-css" href="/wp-content/themes/rock-unicolored/style.<?php echo wp_get_theme()->Version ?>.css"
         type="text/css" media="all" />
         <link rel="shortlink" href="http://bit.ly/GillesH" />

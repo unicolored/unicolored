@@ -31,7 +31,6 @@
         <!-- default themes and core styles -->
         <link rel="stylesheet" href="/wp-content/themes/rock-unicolored/dev/css/bower-concat.css">
         <!-- extra, overriding theme files -->
-        <link rel="stylesheet" href="/wp-content/themes/rock-unicolored/img/material-design-icons/css-sprite/sprite-navigation-white.css">
         <link rel="stylesheet" href="/wp-content/themes/rock-unicolored/dev/css/style.css">
         <!-- /wp_head -->
         <link rel="shortlink" href="http://bit.ly/1uwKbh0" />
@@ -43,7 +42,7 @@
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries. All other JS at the end of file. -->
         <!-- [if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script> 
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
     <body>

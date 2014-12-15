@@ -1,4 +1,4 @@
-/*! unicolored.com - v0.0.21 - 15-12-2014 [FR] */
+/*! unicolored.com - v0.0.50 - 15-12-2014 [FR] */
 //####dev/js/tmp/unicolored.js
 /*!
 unicolored */

@@ -109,7 +109,7 @@ module.exports = function( grunt ) {
             },
             gravatar: {
                 dest: '<%= gh.devpath %>img/ico/gravatar.jpg',
-                src: 'https://www.gravatar.com/avatar/9a424bfbb842ed0e00426d5470f09be3?s=120'
+                src: 'https://www.gravatar.com/avatar/4a942b351908816e70d417f0f31db952?s=120'
             },
             ga: {
                 dest: '<%= gh.devpath %>js/tmp/analytics.js',
@@ -566,7 +566,7 @@ module.exports = function( grunt ) {
             },
             // VIEWS
             views: { // Au changement d'un fichier .less, on appelle la tâche de compilation
-                files: [ '<%= gh.devpath %>js/views/{,*/,*/*/}*.html' ],
+                files: [ '<%= gh.themepath %>js/views/{,*/,*/*/}*.html' ],
                 //tasks: [ 'less:style', 'cssmin:devtheme' ],
             },
             // SCRIPTS

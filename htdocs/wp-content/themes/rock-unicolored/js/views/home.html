@@ -1,37 +1,37 @@
-
 <div layout="row" flex layout-align="center center">
-  <md-progress-linear md-mode="indeterminate" ng-show="loading"></md-progress-linear>
+  <md-progress-linear md-mode="indeterminate" ng-show="loading" flex></md-progress-linear>
 
-<div flex="80" layout="row">
-  <div layout="column" flex="33">
-    <md-card ng-repeat="article in articlesA" ng-init="loadArticles()" class="article portfolio <?php echo (isset($id_current) && $id_current==get_the_ID()) ? 'currentpost' : false ?>" id="post-<?php echo get_the_ID() ?>" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <a ng-href="/#/article/{{article.format}}/{{article.ID}}" class="image-{{article.ID}}">
-        <img ng-src="{{article.featured_image.source}}" class="md-card-image" alt="{{article.featured_image.slug}}">
-      </a>
-      <h2 itemprop="name" ng-bind-html="article.title"></h2>
-      <div itemprop="about" ng-bind-html="article.excerpt">
-      </div>
-    </md-card>
+  <div flex="80" layout="row">
+    <div layout="column" flex="33">
+      <md-card ng-repeat="article in articlesA" ng-init="loadArticles()" class="article portfolio <?php echo (isset($id_current) && $id_current==get_the_ID()) ? 'currentpost' : false ?>" id="post-<?php echo get_the_ID() ?>" itemscope="" itemtype="http://schema.org/CreativeWork">
+        <a ng-href="/#/article/{{article.format}}/{{article.ID}}" class="image-{{article.ID}}">
+          <img ng-src="{{article.featured_image.source}}" err-src="https://www.unicolored.com/img/ico/gravatar.jpg" class="md-card-image" alt="{{article.featured_image.slug}}">
+        </a>
+        <h2 itemprop="name" ng-bind-html="article.title"></h2>
+          <div itemprop="about" ng-bind-html="article.excerpt">
+          </div>
+
+      </md-card>
+    </div>
+    <div layout="column" flex="33">
+      <md-card ng-repeat="article in articlesB" ng-init="loadArticles()" class="article portfolio <?php echo (isset($id_current) && $id_current==get_the_ID()) ? 'currentpost' : false ?>" id="post-<?php echo get_the_ID() ?>" itemscope="" itemtype="http://schema.org/CreativeWork">
+        <a ng-href="/#/article/{{article.format}}/{{article.ID}}" class="image-{{article.ID}}">
+          <img ng-src="{{article.featured_image.source}}" class="md-card-image" alt="{{article.featured_image.slug}}">
+        </a>
+        <h2 itemprop="name" ng-bind-html="article.title"></h2>
+        <div itemprop="about" ng-bind-html="article.excerpt">
+        </div>
+      </md-card>
+    </div>
+    <div layout="column" flex="33">
+      <md-card ng-repeat="article in articlesC" ng-init="loadArticles()" class="article portfolio <?php echo (isset($id_current) && $id_current==get_the_ID()) ? 'currentpost' : false ?>" id="post-<?php echo get_the_ID() ?>" itemscope="" itemtype="http://schema.org/CreativeWork">
+        <a ng-href="/#/article/{{article.format}}/{{article.ID}}" class="image-{{article.ID}}">
+          <img ng-src="{{article.featured_image.source}}" err-src="/wp-content/themes/rock-unicolored/img/material-design-icons/alert/svg/production/ic_error_48px.svg" class="md-card-image" alt="{{article.featured_image.slug}}">
+        </a>
+        <h2 itemprop="name" ng-bind-html="article.title"></h2>
+        <div itemprop="about" ng-bind-html="article.excerpt">
+        </div>
+      </md-card>
+    </div>
   </div>
-  <div layout="column" flex="33">
-    <md-card ng-repeat="article in articlesB" ng-init="loadArticles()" class="article portfolio <?php echo (isset($id_current) && $id_current==get_the_ID()) ? 'currentpost' : false ?>" id="post-<?php echo get_the_ID() ?>" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <a ng-href="/#/article/{{article.format}}/{{article.ID}}" class="image-{{article.ID}}">
-        <img ng-src="{{article.featured_image.source}}" class="md-card-image" alt="{{article.featured_image.slug}}">
-      </a>
-      <h2 itemprop="name" ng-bind-html="article.title"></h2>
-      <div itemprop="about" ng-bind-html="article.excerpt">
-      </div>
-    </md-card>
-  </div>
-  <div layout="column" flex="33">
-    <md-card ng-repeat="article in articlesC" ng-init="loadArticles()" class="article portfolio <?php echo (isset($id_current) && $id_current==get_the_ID()) ? 'currentpost' : false ?>" id="post-<?php echo get_the_ID() ?>" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <a ng-href="/#/article/{{article.format}}/{{article.ID}}" class="image-{{article.ID}}">
-        <img ng-src="{{article.featured_image.source}}" class="md-card-image" alt="{{article.featured_image.slug}}">
-      </a>
-      <h2 itemprop="name" ng-bind-html="article.title"></h2>
-      <div itemprop="about" ng-bind-html="article.excerpt">
-      </div>
-    </md-card>
-  </div>
-</div>
 </div>

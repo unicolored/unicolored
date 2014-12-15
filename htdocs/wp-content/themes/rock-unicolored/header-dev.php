@@ -51,10 +51,17 @@
           <md-toolbar>
               <h2 class="md-toolbar-tools">
                   <a href="/#/" ng-show="toolbar.isHome()">
-                      <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/navigation/svg/production/ic_apps_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                      <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/navigation/svg/production/ic_menu_24px.svg" style="width: 24px; height: 24px;"></md-icon>
                   </a>
                   <a href="/#/" ng-show="!toolbar.isHome()">
                       <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/navigation/svg/production/ic_arrow_back_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                  </a>
+                  <span flex>unicolored</span>
+                  <a href="/#/" ng-show="toolbar.isHome()">
+                    <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/content/svg/production/ic_filter_list_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                  </a>
+                  <a href="/#/" ng-show="toolbar.isArticle()">
+                    <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/social/svg/production/ic_share_24px.svg" style="width: 24px; height: 24px;"></md-icon>
                   </a>
               </h2>
           </md-toolbar>

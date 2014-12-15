@@ -1,6 +1,6 @@
 {
   "name": "unicolored.com",
-  "version": "0.0.21",
+  "version": "0.0.50",
   "description": "Tendances Graphic & Web Design",
   "homepage": "https://www.unicolored.com/",
   "keywords": "tendances, graphic, web, design",
@@ -68,6 +68,7 @@
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-symlink": "^0.3.0",
     "imagemin-jpeg-recompress": "^4.0.0",
     "imagemin-jpegoptim": "^4.0.0",
     "imagemin-mozjpeg": "^4.0.0",

@@ -1,8 +1,0 @@
-<md-card class="article portfolio <?php echo (isset($id_current) && $id_current==get_the_ID()) ? 'currentpost' : false ?>" id="post-<?php echo get_the_ID() ?>" itemscope="" itemtype="http://schema.org/CreativeWork">
-  <a href="{{article.link}}" class="image-{{article.ID}}">
-    <img ng-src="{{article.featured_image.source}}" class="md-card-image" alt="{{article.featured_image.slug}}">
-  </a>
-  <h2 itemprop="name" ng-bind-html="article.title"></h2>
-  <div itemprop="about" ng-bind-html="article.excerpt">
-  </div>
-</md-card>

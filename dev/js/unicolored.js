@@ -14,14 +14,14 @@ When files are selected or dropped into the component, one or more filters are a
 unicolored.config( [ '$routeProvider', function( $routeProvider ) {
     'use strict';
     $routeProvider.when( '/', {
-        templateUrl: '/wp-content/themes/rock-unicolored/dev/js/views/home.html',
+        templateUrl: '/wp-content/themes/rock-unicolored/js/views/home.html',
         controller: 'BonjourController'
     } ).when( '/about', {
-        templateUrl: '/wp-content/themes/rock-unicolored/dev/js/views/about.html',
+        templateUrl: '/wp-content/themes/rock-unicolored/js/views/about.html',
         //controller: 'AboutCtrl'
     } ).when( '/article/:type/:id', {
         templateUrl: function( params ) {
-            return '/wp-content/themes/rock-unicolored/dev/js/views/article-' + params.type + '.html';
+            return '/wp-content/themes/rock-unicolored/js/views/article-' + params.type + '.html';
         },
         controller: 'ArticleController'
     } ).otherwise( {
@@ -32,7 +32,17 @@ unicolored.config( [ '$routeProvider', function( $routeProvider ) {
 unicolored.run( function() {
     'use strict';
 } );
-unicolored.controller( 'BonjourController', [ '$scope', '$http', function( $scope, $http ) {
+unicolored.controller( 'ToolbarController', [ '$scope', '$location', function( $scope, $location ) {
+    'use strict';
+    this.isHome = function() {
+        return $location.path() === '/';
+    };
+    //console.log(_.contains($location.path(),'article'));
+    this.isArticle = function() {
+        return _.contains( $location.path(), 'article' );
+    };
+} ] );
+unicolored.controller( 'BonjourController', [ '$scope', '$http', '$q', function( $scope, $http, $q ) {
     'use strict';
     $scope.world = 'Gilles';
     $scope.articlesA = [];
@@ -40,6 +50,7 @@ unicolored.controller( 'BonjourController', [ '$scope', '$http', function( $scop
     $scope.articlesC = [];
     $scope.articlesD = [];
     $scope.loading = true;
+    var promise = $q.all( null );
     $http( {
         method: 'GET',
         url: '/wp-json/posts/',
@@ -47,8 +58,11 @@ unicolored.controller( 'BonjourController', [ '$scope', '$http', function( $scop
         $scope.articlesA = data.slice( 0, 13 );
         $scope.articlesB = data.slice( 12, 25 );
         $scope.articlesC = data.slice( 24, 37 );
-        $scope.loading = false;
         console.log( status );
+    } );
+    promise.then( function() {
+        //This is run after all of your HTTP requests are done
+        $scope.loading = false;
     } );
 } ] );
 unicolored.controller( 'ArticleController', [ '$scope', '$http', '$routeParams', function( $scope, $http, $routeParams ) {
@@ -59,8 +73,20 @@ unicolored.controller( 'ArticleController', [ '$scope', '$http', '$routeParams',
     $http( {
         method: 'GET',
         url: '/wp-json/posts/' + $routeParams.id,
-    } ).success( function( data, status ) {
+    } ).success( function( data ) {
         $scope.article = data;
         console.log( data );
     } );
 } ] );
+unicolored.directive( 'errSrc', function() {
+    'use strict';
+    return {
+        link: function( scope, element, attrs ) {
+            element.bind( 'error', function() {
+                if ( attrs.src !== attrs.errSrc ) {
+                    attrs.$set( 'src', attrs.errSrc );
+                }
+            } );
+        }
+    };
+} );

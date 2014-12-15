@@ -46,8 +46,22 @@
         <![endif]-->
     </head>
     <body>
-      <md-toolbar>
-        <h2 class="md-toolbar-tools">
-          <span>unicolored</span> <md-button ng-href="/#/" class="md-raised md-primary">Home</md-button> <md-button ng-href="/#/about" class="md-raised md-primary">About</md-button>
-        </h2>
-      </md-toolbar>
+      <div data-ng:controller="ToolbarController as toolbar">
+          <md-toolbar>
+              <h2 class="md-toolbar-tools">
+                  <a href="/#/" ng-show="toolbar.isHome()">
+                      <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/navigation/svg/production/ic_menu_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                  </a>
+                  <a href="/#/" ng-show="!toolbar.isHome()">
+                      <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/navigation/svg/production/ic_arrow_back_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                  </a>
+                  <span flex>unicolored</span>
+                  <a href="/#/" ng-show="toolbar.isHome()">
+                    <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/content/svg/production/ic_filter_list_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                  </a>
+                  <a href="/#/" ng-show="toolbar.isArticle()">
+                    <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/social/svg/production/ic_share_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+                  </a>
+              </h2>
+          </md-toolbar>
+      </div>

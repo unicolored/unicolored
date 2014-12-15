@@ -3,7 +3,7 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="fr-FR" prefix="og: http://ogp.me/ns#"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="fr-FR" prefix="og: http://ogp.me/ns#"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="fr-FR" prefix="og: http://ogp.me/ns#" data-ng-app="unicolored" layout="column" md-theme="gilles" manifest="offline.appcache">
+<html class="no-js" lang="fr-FR" prefix="og: http://ogp.me/ns#" data-ng-app="unicolored" layout="column" md-theme="gilles">
 <!--<![endif]-->
     <head prefix="gilles: https://www.unicolored.com/">
         <meta charset="utf-8" />
@@ -42,8 +42,22 @@
         <![endif]-->
     </head>
     <body>
-      <md-toolbar>
-        <h2 class="md-toolbar-tools">
-          <span>unicolored</span> <md-button ng-href="/#/" class="md-raised md-primary">Home</md-button> <md-button ng-href="/#/about" class="md-raised md-primary">About</md-button>
-        </h2>
-      </md-toolbar>
+      <div data-ng:controller="ToolbarController as toolbar">
+        <md-toolbar>
+          <h2 class="md-toolbar-tools">
+            <a href="/#/" ng-show="toolbar.isHome()">
+              <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/navigation/svg/production/ic_menu_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+            </a>
+            <a href="/#/" ng-show="!toolbar.isHome()">
+              <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/navigation/svg/production/ic_arrow_back_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+            </a>
+            <span flex>unicolored</span>
+            <a href="/#/" ng-show="toolbar.isHome()">
+              <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/content/svg/production/ic_filter_list_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+            </a>
+            <a href="/#/" ng-show="toolbar.isArticle()">
+              <md-icon icon="/wp-content/themes/rock-unicolored/img/material-design-icons/social/svg/production/ic_share_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+            </a>
+          </h2>
+        </md-toolbar>
+      </div>

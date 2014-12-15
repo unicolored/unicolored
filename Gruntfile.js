@@ -215,7 +215,7 @@ module.exports = function( grunt ) {
                 dest: '<%= gh.devpath %>js/tmp/bower-concat.js',
                 // je ne charge pas les css de bower actuellement
                 cssDest: '<%= gh.devpath %>css/bower-concat.css',
-                exclude: [ 'angular', 'angular-mocks', 'angular-scenario' ],
+                exclude: [ 'angular', 'angular-mocks', 'angular-scenario', 'angular-local-storage', 'angular-touch', 'es5shim', 'json3' ],
                 /*dependencies: {
                     'angular-animate': 'angular',
                 },*/
@@ -487,8 +487,8 @@ module.exports = function( grunt ) {
             screenshots: {
                 src: [ "./dev/screenshots/**/*.png" ]
             },
-            yesimlocal: {
-                src: [ "./dev/yesimlocal.php" ]
+            dev: {
+                src: [ "./htdocs/wp-content/themes/rock-unicolored/dev" ]
             },
             webapp: {
                 src: [ "./htdocs/manifest.webapp", "./htdocs/offline.appcache" ]
@@ -743,15 +743,6 @@ module.exports = function( grunt ) {
               }
               ],
             },
-            yesimlocal: {
-                files: [
-              // makes all src relative to cwd
-                    {
-                        src: 'yesimlocal.php',
-                        dest: '<%= gh.devpath %>yesimlocal.php',
-              }
-              ],
-            },
             webapp: {
                 files: [
               // makes all src relative to cwd
@@ -764,6 +755,57 @@ module.exports = function( grunt ) {
                         dest: 'htdocs/offline.appcache',
               },
               ],
+            },
+        },
+        /*
+        ##         ## ##       ######  ##    ## ##     ## ##       #### ##    ## ##    ##
+        ##         ## ##      ##    ##  ##  ##  ###   ### ##        ##  ###   ## ##   ##
+        ##       #########    ##         ####   #### #### ##        ##  ####  ## ##  ##
+        ##         ## ##       ######     ##    ## ### ## ##        ##  ## ## ## #####
+        ##       #########          ##    ##    ##     ## ##        ##  ##  #### ##  ##
+        ##         ## ##      ##    ##    ##    ##     ## ##        ##  ##   ### ##   ##
+        ########   ## ##       ######     ##    ##     ## ######## #### ##    ## ##    ##
+        */
+        symlink: {
+            // Enable overwrite to delete symlinks before recreating them
+            options: {
+                overwrite: true
+            },
+            // The "build/target.txt" symlink will be created and linked to
+            // "source/target.txt". It should appear like this in a file listing:
+            // build/target.txt -> ../source/target.txt
+            /*
+          explicit: {
+          src: 'source/target.txt',
+          dest: 'build/target.txt'
+        },*/
+            // These examples using "expand" to generate src-dest file mappings:
+            // http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically
+            dev: {
+                files: [
+          // All child files and directories in "source", starting with "foo-" will
+          // be symlinked into the "build" directory, with the leading "source"
+          // stripped off.
+
+                    {
+                        expand: true,
+                        overwrite: false,
+                        cwd: 'dev',
+                        src: [ '*' ],
+                        dest: 'htdocs/wp-content/themes/rock-unicolored/dev'
+          },
+          // All child directories in "source" will be symlinked into the "build"
+          // directory, with the leading "source" stripped off.
+          /*
+          {
+          expand: true,
+          overwrite: false,
+          cwd: 'dev',
+          src: ['*'],
+          dest: 'htdocs/wp-content/themes/rock-unicolored/dev',
+          filter: 'isDirectory'
+        }*/
+        ]
             },
         }
     } );
@@ -792,18 +834,18 @@ module.exports = function( grunt ) {
             default:
             /*
             Preparation du mode développement
-            - copie du fichier yesimlocal.php dans /dev/
+            - création du symlink de dev/ dans le dossier du thème
             - suppression du manifest.xml et du .appcache dans /htdocs/
             */
-                grunt.task.run( [ 'copy:yesimlocal', 'clean:webapp' ] );
+                grunt.task.run( [ 'symlink:dev', 'clean:webapp' ] );
             break;
             case 'prod':
                 /*
                 Préparation du mode production
-                - suppression du fichier imlocal.php dans /dev/
+                - suppression du symlink
                 - copie des fichiers manifest.xml et .appcache dans /htdocs/
                 */
-                    grunt.task.run( [ 'clean:yesimlocal', 'copy:webapp' ] );
+                    grunt.task.run( [ 'clean:dev', 'copy:webapp' ] );
                 break;
         }
     } );

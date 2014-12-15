@@ -215,7 +215,7 @@ module.exports = function( grunt ) {
                 dest: '<%= gh.devpath %>js/tmp/bower-concat.js',
                 // je ne charge pas les css de bower actuellement
                 cssDest: '<%= gh.devpath %>css/bower-concat.css',
-                exclude: [ 'angular', 'angular-mocks', 'angular-scenario' ],
+                exclude: [ 'angular', 'angular-mocks', 'angular-scenario', 'angular-local-storage', 'angular-touch', 'es5shim', 'json3' ],
                 /*dependencies: {
                     'angular-animate': 'angular',
                 },*/

@@ -35,12 +35,12 @@ unicolored.run( function() {
 unicolored.controller( 'ToolbarController', [ '$scope', '$location', function( $scope, $location ) {
     'use strict';
     this.isHome = function() {
-            return $location.path() == '/';
-        }
-        //console.log(_.contains($location.path(),'article'));
+        return $location.path() === '/';
+    };
+    //console.log(_.contains($location.path(),'article'));
     this.isArticle = function() {
         return _.contains( $location.path(), 'article' );
-    }
+    };
 } ] );
 unicolored.controller( 'BonjourController', [ '$scope', '$http', '$q', function( $scope, $http, $q ) {
     'use strict';
@@ -63,7 +63,7 @@ unicolored.controller( 'BonjourController', [ '$scope', '$http', '$q', function(
     promise.then( function() {
         //This is run after all of your HTTP requests are done
         $scope.loading = false;
-    } )
+    } );
 } ] );
 unicolored.controller( 'ArticleController', [ '$scope', '$http', '$routeParams', function( $scope, $http, $routeParams ) {
     'use strict';
@@ -73,19 +73,20 @@ unicolored.controller( 'ArticleController', [ '$scope', '$http', '$routeParams',
     $http( {
         method: 'GET',
         url: '/wp-json/posts/' + $routeParams.id,
-    } ).success( function( data, status ) {
+    } ).success( function( data ) {
         $scope.article = data;
         console.log( data );
     } );
 } ] );
 unicolored.directive( 'errSrc', function() {
+    'use strict';
     return {
         link: function( scope, element, attrs ) {
             element.bind( 'error', function() {
-                if ( attrs.src != attrs.errSrc ) {
+                if ( attrs.src !== attrs.errSrc ) {
                     attrs.$set( 'src', attrs.errSrc );
                 }
             } );
         }
-    }
+    };
 } );

@@ -3,7 +3,7 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="fr-FR" prefix="og: http://ogp.me/ns#"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="fr-FR" prefix="og: http://ogp.me/ns#"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="fr-FR" prefix="og: http://ogp.me/ns#" data-ng-app="unicolored" layout="column" md-theme="gilles" manifest="offline.appcache">
+<html class="no-js" lang="fr-FR" prefix="og: http://ogp.me/ns#" data-ng-app="unicolored" layout="column" md-theme="gilles">
 <!--<![endif]-->
     <head prefix="gilles: https://www.unicolored.com/">
         <meta charset="utf-8" />
@@ -27,7 +27,6 @@
         <meta name="author" content="Gilles Hoarau" />
         <link rel="alternate" type="application/rss+xml" title="Gilles Hoarau &raquo; Flux du site unicolored.com"
         href="http://feeds.feedburner.com/unicolored" />
-        <link rel="stylesheet" href="/wp-content/themes/rock-unicolored/img/material-design-icons/css-sprite/sprite-navigation-white.css">
         <link rel="stylesheet" id="style-child-css" href="/wp-content/themes/rock-unicolored/style.<?php echo wp_get_theme()->Version ?>.css"
         type="text/css" media="all" />
         <link rel="shortlink" href="http://bit.ly/GillesH" />

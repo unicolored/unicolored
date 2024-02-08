@@ -1,4 +1,18 @@
-### Hi there 👋
+### Hi! Salut! Ciao! 👋
+
+I'm Gilles. I'm passionate about web apps, creative design, and new technologies.
+
+In my journey from brewing coffee ☕️ to celebrating successful launches 🎉,
+I've covered every aspect of web development and deployment.
+
+This includes:
+- setting up infrastructure,
+- building APIs,
+- coding (full stack),
+- testing,
+- and configuring CI/CD pipelines.
+
+Find me on: https://www.gilles.dev
 
 <!--
 **unicolored/unicolored** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

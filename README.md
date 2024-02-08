@@ -3,6 +3,7 @@
 I'm Gilles. I'm passionate about web apps, creative design, and new technologies.
 
 In my journey from brewing coffee ☕️ to celebrating successful launches 🎉,
+
 I've covered every aspect of web development and deployment.
 
 This includes:

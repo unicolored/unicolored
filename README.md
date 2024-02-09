@@ -14,6 +14,8 @@ This includes:
 - and configuring CI/CD pipelines.
 
 Find me on: https://www.gilles.dev
+Public repositories: https://hub.docker.com/u/unicolored
+https://www.linkedin.com/in/gilleshoarau
 
 <!--
 **unicolored/unicolored** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

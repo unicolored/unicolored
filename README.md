@@ -6,13 +6,13 @@ In my journey from brewing coffee ☕️ to celebrating successful launches 🎉
 I've covered every aspect of web development and deployment.
 
 This includes:
-- setting up infrastructure,
-- building APIs,
-- coding (full stack),
+- building cloud infrastructure,
+- coding full stack: frontend, backend, APIs, apps,
 - testing,
-- configuring CI/CD pipelines
+- deploying CI/CD pipelines
 
-Find me on: https://www.gilles.dev \
+More details on: https://www.gilles.dev
+
 Public repositories: https://hub.docker.com/u/unicolored \
 https://www.linkedin.com/in/gilleshoarau
 

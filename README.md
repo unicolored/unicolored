@@ -2,8 +2,7 @@
 
 I'm Gilles. I'm passionate about web apps, creative design, and new technologies.
 
-In my journey from brewing coffee ☕️ to celebrating successful launches 🎉,
-
+In my journey from brewing coffee ☕️ to celebrating successful launches 🎉, \
 I've covered every aspect of web development and deployment.
 
 This includes:
@@ -11,10 +10,10 @@ This includes:
 - building APIs,
 - coding (full stack),
 - testing,
-- and configuring CI/CD pipelines.
+- configuring CI/CD pipelines
 
-Find me on: https://www.gilles.dev
-Public repositories: https://hub.docker.com/u/unicolored
+Find me on: https://www.gilles.dev \
+Public repositories: https://hub.docker.com/u/unicolored \
 https://www.linkedin.com/in/gilleshoarau
 
 <!--

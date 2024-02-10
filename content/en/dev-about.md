@@ -2,31 +2,37 @@
 
 ## I'm Gilles Hoarau
 
-I like to wake up early, learn every day, and think about what make life beautiful ☀️
+I like to wake up early, learn every day, and think about what makes life beautiful ☀️
 
-### Over the past 15 years, I've worked on a wide range of development and graphic design projects,
-covering the entire process from creative brainstorming, to final delivery
+### In the past 15 years, I've worked on a diverse array of development and graphic design projects,
+covering everything from creative brainstorming to final delivery.
 
-My adventure started by writing a book to teach photo manipulation. It sales around 20000 copies.
-Few years later, I used my self-taught skills in a 360° communication agency,
-producing creative media and effective tools to bring satisfaction to all of our customers.
+My adventure began with writing a book to teach photo manipulation.
+The book, titled <u>Scan et retouche d'images</u>, sold around 20,000 copies.
+A few years later, I joined a full-service advertising agency, where I used my self-taught skills
+to produce creative media that brought satisfaction to all of our customers.
 
-In 2014, I joined the Digital Factory of Groupe PSA,
-to facilitate tech scouting committees and develop proof of concepts on new trends:
+In 2014, I joined Groupe PSA’s Digital Factory to facilitate tech scouting committees
+and develop proof of concepts on new trends:
 Internet-Of-Things, Real-time 3D, Progressive Web Apps, Chatbots & Vocal Assistants.
-My teammates call me as a “Jack of all trades” and “Innovation guy”.
+My colleagues often refer to me as a “Jack of all trades”.
 
-From 2021 to 2023, I led the development of 2 projects, in the new company Stellantis:
-a Search Engine powered by AI and an Order Tracking module connected to the supply chain events.
+From 2021 to 2023, I led the development of 2 projects for Stellantis:
+an AI-driven vehicle Search Engine and an Order Tracking module connected with the supply chain management system.
 
-Overall, I appreciated working with teams from around the world, exposing me to a wealth of different cultures.
-I am very grateful for the inspiring leadership that pushed me so far.
+Overall, I appreciated working with teams from around the world,
+exposing me to a wealth of different cultures and perspectives.
+The inspiring leadership I experienced pushed me to grow and develop in ways I never imagined.
+I am deeply grateful for these experiences.
 
-Starting in 2024, I've decided to level up my development skills,
-particularly in the area of web apps that leverage generative AI capabilities.
+Starting in 2024, I'm now focusing my development efforts
+specifically on web apps that leverage cutting-edge generative AI technologies.
 
-While listening to great opportunities, I'm available for freelance work 🚀
+While I'm open to listening to exciting opportunities,
+I'm currently available for freelance web development projects. 🚀
+
+Drop me a line if you have any questions or ideas. ➡️ [Contact](/contact)
 
 ### I got 4 cats 🥰 and 4 chickens.
 
-When they spare me some times, I try to win at chess, play piano and learn Italian for my next holidays.
+When they spare me some time, I try to win at chess, play piano and learn Italian for my next holidays.

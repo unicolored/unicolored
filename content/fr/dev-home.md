@@ -1,6 +1,6 @@
-# Hi, I'm Gilles ≈ a developer
+# 👋 Gilles ≈ développeur
 
-## A self-taught, curious professional with a passion for web apps, creative design, and new technologies.
+## Un autodidacte curieux, passionné par les applications web, le design créatif et les nouvelles technologies.
 
 ### My developer stack
 

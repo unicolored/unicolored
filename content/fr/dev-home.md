@@ -1,27 +1,26 @@
-# 👋 Gilles ≈ développeur
+# Gilles Hoarau ≈ développeur
 
-## Un autodidacte curieux, passionné par les applications web, le design créatif et les nouvelles technologies.
+## Je suis un autodidacte, fabriquant de sites webs et de visuels, toujours curieux des nouvelles tendances et technologies.
 
-### My developer stack
+### Mon pack développeur
 
-In my journey from brewing coffee ☕️ to celebrating successful launches 🎉,
-I've covered every aspect of web development and deployment.
-This includes setting up scalable cloud infrastructure,
-coding a lot, testing, and building containers on CI/CD pipelines.
+Dans ma carrière, je suis intervenu à toutes les étapes de développement et de déploiement de sites web.
+Ce qui comprend la préparation du café, la mise à l'échelle d'infrastructures cloud, beaucoup de code, des tests,
+la création de conteneurs sur des chaînes CI/CD et la célébration des lancements.
 
-My favorite stacks ⭐️:
+Mes outils ⭐️
 [NX, Angular, NestJS, Firebase];
 [Symfony, Docker, MongoDB, Redis];
 
-Special mention for: ThreeJS
+Mention spéciale : ThreeJS
 
 ### Creative media design
 
-My creative design journey started with traditional pencil drawings and sketches.
-I made the jump to computer graphics, playing with photos and 3D models.
-Then I focused for a while on Print design and branding before mastering web design.
-It was back in the days before smartphones took over the world 😅.
+Mon aventure créative a commencé par le dessin traditionnel.
+J'ai vite été attiré par l'infographie, la retouche photo et la modélisation 3D.
+Puis je me suis concentré sur l'imprimerie et la création d'identité visuelle avant de me spécialiser en web design.
+C'était avant que les smartphones aient conquis le monde 😅.
 
-My favorite tools: Photoshop, Illustrator, Figma.
+Mes outils préférés : Photoshop, Illustrator, Figma.
 
-Special mention for: Blender and new generative AI for image creation!
+Mention spéciale pour : Blender et la génération d'image avec l'IA !

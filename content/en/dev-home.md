@@ -1,15 +1,14 @@
 # Hi, I'm Gilles ≈ a developer
 
-## A self-taught, curious professional with a passion for web apps, creative design, and new technologies.
+## I'm a self-taught guy crafting web apps and designs with a curiosity for technology and design trends.
 
 ### My developer stack
 
-In my journey from brewing coffee ☕️ to celebrating successful launches 🎉,
-I've covered every aspect of web development and deployment.
-This includes setting up scalable cloud infrastructure,
-coding a lot, testing, and building containers on CI/CD pipelines.
+In my journey, I've covered every aspect of web development and deployment.
+This includes brewing coffee, setting up scalable cloud infrastructure,
+coding a lot, testing, building containers on CI/CD pipelines and celebrating successful launches.
 
-My favorite stacks ⭐️:
+My stacks ⭐️
 [NX, Angular, NestJS, Firebase];
 [Symfony, Docker, MongoDB, Redis];
 
@@ -24,4 +23,4 @@ It was back in the days before smartphones took over the world 😅.
 
 My favorite tools: Photoshop, Illustrator, Figma.
 
-Special mention for: Blender and new generative AI for image creation!
+Special mention for: Blender and generative AI for image creation!

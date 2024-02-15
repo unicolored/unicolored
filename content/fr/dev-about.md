@@ -1,38 +1,39 @@
-### Hi! Salut! Ciao!
+### Salut ! Hi! Ciao!
 
-## I'm Gilles Hoarau
+## Je suis Gilles Hoarau
 
-I like to wake up early, learn every day, and think about what makes life beautiful ☀️
+J'aime me lever tôt, apprendre chaque jour et réfléchir à ce qui rend la vie si belle ☀️
 
-### In the past 15 years, I've worked on a diverse array of development and graphic design projects,
-covering everything from creative brainstorming to final delivery.
+### Au cours des 15 dernières années, j'ai travaillé sur divers projets de développement et de graphisme, du brief créatif à la livraison finale.
 
-My adventure began with writing a book to teach photo manipulation.
-The book, titled <u>Scan et retouche d'images</u>, sold around 20,000 copies.
-A few years later, I joined a full-service advertising agency, where I used my self-taught skills
-to produce creative media that brought satisfaction to all of our customers.
+Mon aventure a commencé par la publication d'un livre pour la découverte de la retouche photographique.
+Le livre, intitulé <u>Scan et retouche d'images</u>, s'est vendu à plus de 20 000 exemplaires.
+J'ai ensuite rejoint une agence de communication globale, où j'ai utilisé mes compétences d'autodidacte
+pour produire des supports de communication qui ont donné satisfaction à tous nos clients.
 
-In 2014, I joined Groupe PSA’s Digital Factory to facilitate tech scouting committees
-and develop proof of concepts on new trends:
-Internet-Of-Things, Real-time 3D, Progressive Web Apps, Chatbots & Vocal Assistants.
-My colleagues often refer to me as a “Jack of all trades”.
+En 2014, j'ai rejoint la Digital Factory du Groupe PSA pour y animer des comités innovation
+et développer des POC (Proof Of Concepts - Démonstration de faisabilité) relatifs aux nouvelles tendances :
+l'IOT (Internet des objets), la 3D temps réel, les PWA (Progressive Web Apps), les chatbots et autres extensions d'assistants vocaux.
+Mes collègues m'ont alors surnommé "le couteau suisse".
 
-From 2021 to 2023, I led the development of 2 projects for Stellantis:
-an AI-driven vehicle Search Engine and an Order Tracking module connected with the supply chain management system.
+De 2021 à 2023, j'ai supervisé le développement de 2 projets pour les clients de Stellantis :
+un moteur de recherche de véhicule propulsé par l'IA, et un module de suivi de commande connecté aux systèmes de la chaîne logistique.
 
-Overall, I appreciated working with teams from around the world, 
-exposing me to a wealth of different cultures and perspectives.
-The inspiring leadership I experienced pushed me to grow and develop in ways I never imagined.
-I am deeply grateful for these experiences.
+J'ai apprécié collaborer avec des équipes du monde entier,
+ce qui m'a permis de découvrir une riche diversité de cultures et de points de vue.
+Le leadership inspirant dont j'ai bénéficié m'a permis de me dépasser et de m'épanouir de manière inattendue.
+Je suis profondément reconnaissant pour toutes ces expériences.
 
-Starting in 2024, I'm now focusing my development efforts
-specifically on web apps that leverage cutting-edge generative AI technologies.
+### Et maintenant ?
 
-While I'm open to listening to exciting opportunities,
-I'm currently available for freelance web development projects. 🚀
+À partir de 2024, je concentre mes efforts de développement
+vers les applications exploitant les dernières technologies d'IA générative.
 
-Drop me a line if you have any questions or ideas. ➡️ [Contact](/contact)
+Restant à l'écoute de missions stimulantes,
+je suis disponible pour des projets en tant que freelance. 🚀
 
-### I got 4 cats 🥰 and 4 chickens.
+Je suis à votre écoute pour toute question ou suggestion. ➡️ [Contact](/contact)
 
-When they spare me some time, I try to win at chess, play piano and learn Italian for my next holidays.
+### Mes loisirs
+
+Entouré de mes 4 chats et 4 poules, mes moments de détente sont consacrés aux échecs (où je vise la victoire !), au piano et à l'apprentissage de l'italien pour mes prochaines vacances. 

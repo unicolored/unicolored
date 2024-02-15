@@ -1,18 +1,16 @@
 # Gilles Hoarau ≈ développeur
 
-## Je suis un autodidacte, fabriquant de sites webs et de visuels, toujours curieux des nouvelles tendances et technologies.
+## Je suis un autodidacte, créateur de sites web et de visuels, à l'affût des nouvelles tendances et technologies.
 
 ### Mon pack développeur
 
-Dans ma carrière, je suis intervenu à toutes les étapes de développement et de déploiement de sites web.
-Ce qui comprend la préparation du café, la mise à l'échelle d'infrastructures cloud, beaucoup de code, des tests,
-la création de conteneurs sur des chaînes CI/CD et la célébration des lancements.
+J'ai participé à toutes les étapes de développement et de déploiement de sites web tout au long de ma carrière.
+Ce qui comprend la préparation du café, la mise à l'échelle d'infrastructures cloud, beaucoup de code et des tests.
+Mais aussi la création de conteneurs sur des chaînes CI/CD et la célébration des lancements.
 
-Mes outils ⭐️
-[NX, Angular, NestJS, Firebase];
-[Symfony, Docker, MongoDB, Redis];
-
-Mention spéciale : ThreeJS
+Front-end: NX, Angular, NestJS, Firebase
+Back-end: Symfony, Docker, MongoDB, Redis
+Compétence bonus: ThreeJS
 
 ### Creative media design
 
@@ -23,4 +21,4 @@ C'était avant que les smartphones aient conquis le monde 😅.
 
 Mes outils préférés : Photoshop, Illustrator, Figma.
 
-Mention spéciale pour : Blender et la génération d'image avec l'IA !
+Mention spéciale : Blender et la génération d'image avec l'IA !

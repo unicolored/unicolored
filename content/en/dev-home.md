@@ -1,26 +1,24 @@
 # Hi, I'm Gilles ≈ a developer
 
-## I'm a self-taught guy crafting web apps and designs with a curiosity for technology and design trends.
+## I'm a self-taught web developer and designer with a constant thirst for new technologies and design trends.
 
-### My developer stack
+### My developer toolkit
 
-In my journey, I've covered every aspect of web development and deployment.
-This includes brewing coffee, setting up scalable cloud infrastructure,
-coding a lot, testing, building containers on CI/CD pipelines and celebrating successful launches.
+Throughout my career, I've tackled every stage of web development and deployment,
+from brewing the coffee ☕️ to scaling cloud infrastructure, writing tons of code, testing it thoroughly,
+building containers in CI/CD pipelines, and celebrating successful launches.
 
-My stacks ⭐️
-[NX, Angular, NestJS, Firebase];
-[Symfony, Docker, MongoDB, Redis];
-
-Special mention for: ThreeJS
+Front-end: NX, Angular, NestJS, Firebase
+Back-end: Symfony, Docker, MongoDB, Redis
+Bonus skill: ThreeJS
 
 ### Creative media design
 
-My creative design journey started with traditional pencil drawings and sketches.
-I made the jump to computer graphics, playing with photos and 3D models.
-Then I focused for a while on Print design and branding before mastering web design.
-It was back in the days before smartphones took over the world 😅.
+My creative journey began with traditional drawing and sketching.
+Soon, I was exploring the world of computer graphics, playing with photo editing and 3D modeling.
+Later, I honed my skills in print design and branding before diving headfirst into web design.
+Back then, smartphones hadn't even conquered the world yet.
 
-My favorite tools: Photoshop, Illustrator, Figma.
+My design toolbox: Photoshop, Illustrator, Figma
 
-Special mention for: Blender and generative AI for image creation!
+Bonus tool: Blender and generative AI for image creation!

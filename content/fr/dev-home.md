@@ -10,15 +10,14 @@ Mais aussi la création de conteneurs sur des chaînes CI/CD et la célébration
 
 Front-end: NX, Angular, NestJS, Firebase
 Back-end: Symfony, Docker, MongoDB, Redis
-Compétence bonus: ThreeJS
+Bonus: ThreeJS
 
-### Creative media design
+### Création de supports de comm.
 
 Mon aventure créative a commencé par le dessin traditionnel.
 J'ai vite été attiré par l'infographie, la retouche photo et la modélisation 3D.
 Puis je me suis concentré sur l'imprimerie et la création d'identité visuelle avant de me spécialiser en web design.
-C'était avant que les smartphones aient conquis le monde 😅.
+C'était avant que les smartphones aient conquis le monde.
 
-Mes outils préférés : Photoshop, Illustrator, Figma.
-
-Mention spéciale : Blender et la génération d'image avec l'IA !
+Ma boîte à outils : Photoshop, Illustrator, Figma.
+Bonus : Blender et la génération d'image avec l'IA !

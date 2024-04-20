@@ -1,6 +1,6 @@
 ### Hi! Salut! Ciao! 👋
 
-I'm Gilles. I'm passionate about web apps, creative design, and new technologies.
+I'm Gilles. I'm passionate about web apps, creative design, and 3d stuff.
 
 In my journey from brewing coffee ☕️ to celebrating successful launches 🎉, \
 I've covered every aspect of web development and deployment.

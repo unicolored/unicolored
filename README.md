@@ -1,7 +1,9 @@
 ### Hi! Salut! Ciao! 👋
 
 I'm Gilles. I'm passionate about web apps, creative design, and 3d stuff.
+
 👋 I talk French, English, PHP, Javascript, and a bit of Italian 😀
+
 ❤️ Symfony, Angular, Nest, NX Workspaces.
 
 In my journey from brewing coffee ☕️ to celebrating successful launches 🎉, \
@@ -14,6 +16,8 @@ This includes:
 - deploying CI/CD pipelines
 
 More details on: https://www.gilles.dev
+
+🎉 **7000 hours of code achieved on Apr. 23, 2024** 🥳
 
 [![wakatime](https://wakatime.com/badge/user/36d0aa99-a7ae-4bb7-a202-a3409eae939c.svg)](https://wakatime.com/@36d0aa99-a7ae-4bb7-a202-a3409eae939c)
 

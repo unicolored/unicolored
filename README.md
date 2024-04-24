@@ -2,7 +2,7 @@
 
 I'm Gilles. I'm passionate about web apps, creative design, and 3d stuff.
 
-👋 I talk French, English, PHP, Javascript, and a bit of Italian 😀
+👋 I speak French, English, PHP, Javascript, and a bit of Italian 😀
 
 ❤️ Symfony, Angular, Nest, NX Workspaces.
 

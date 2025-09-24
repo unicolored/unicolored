@@ -4,7 +4,7 @@ I'm Gilles. I'm passionate about web apps, creative design, and 3d stuff.
 
 👋 I speak French, English, PHP, Javascript, and a bit of Italian 😀
 
-❤️ Symfony, Angular, Nest, NX Workspaces.
+❤️ Symfony, Angular, Neovim.
 
 In my journey from brewing coffee ☕️ to celebrating successful launches 🎉, \
 I've covered every aspect of web development and deployment.

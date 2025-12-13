@@ -1,7 +1,7 @@
 ### 👋 Hi! Salut!
 
 **I'm Gilles, a French PHP developer, living in Aube, France.** \
-I help companies to achieve their business goals and resolve their technical debt. \
+I help companies achieve their business goals and resolve their technical debt. \
 *Feel free to reach out to me!*
 
 ❤️ Symfony, EasyAdmin, API Platform, FrankenPHP \

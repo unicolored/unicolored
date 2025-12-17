@@ -1,7 +1,6 @@
-### 👋 Hi! Salut!
+### 👋 Hi! Salut! I'm Gilles Hoarau
 
-**I'm Gilles, a French PHP developer, living in Aube, France.** \
-I help companies achieve their business goals and resolve their technical debt. \
+**An enthusiastic developer, living in Aube, France.**
 
 ❤️ Symfony + EasyAdmin + API Platform + FrankenPHP \
 ⭐️ Angular, NestJS \

@@ -9,6 +9,17 @@
 Since 2000, I've handled many aspect of Web development \
 ➡️ frontend, backend, APIs, apps, testing, deploying.
 
+**Side projects**
+chesspop.live
+
+**Maintainer**
+jekyll-meilisearch
+chessfield
+
+**Contributor**
+Lichess/Chessground
+Meilisearch/Meilisearch-Symfony
+
 https://gilles.dev
 
 Check my stats on [Wakatime](https://wakatime.com/@unicolored) \
